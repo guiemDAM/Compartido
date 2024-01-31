@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,11 @@
     <link rel="stylesheet" href="/css/estilo.css">
     <title>Nombre Asociación</title>
 </head>
+
 <body>
-    <div><a href="index.html"><h1>Futuro Logo</h1></a></div>
+    <div><a href="index.html">
+            <h1>Futuro Logo</h1>
+        </a></div>
     <header>
         <aside>
             <ol><a href="libre.html">Página libre</a></ol>
@@ -20,12 +24,12 @@
     </header>
 
     <div> <!-- TODO: Comprobar esto -->
-        <form action="mailto:admin@asociacion.org">
+        <form action="mailto:admin@asociacion.org" method="POST" enctype="text/plain">
             <fieldset>
                 <table>
                     <tr>
                         <td><label for="nombre">Nombre:</label></td>
-                        <td><input type="text" name="nombre" id="nombre"></td>
+                        <td><input type="text" name="nombre" id="nombre" required></td>
                     </tr>
                     <tr>
                         <td><label for="apellidos">Apellidos:</label></td>
@@ -33,11 +37,11 @@
                     </tr>
                     <tr>
                         <td><label for="dni">DNI:</label></td>
-                        <td><input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$"></td>
+                        <td><input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$" required></td>
                     </tr>
                     <tr>
                         <td><label for="mail">E-mail:</label></td>
-                        <td><input type="email" name="mail" id="mail"></td>
+                        <td><input type="email" name="mail" id="mail" required></td>
                     </tr>
                     <tr>
                         <td><label for="estado">Estado civil:</label></td>
@@ -51,31 +55,72 @@
                     </tr>
                     <tr>
                         <td><label for="tlf">Tlf:</label></td>
-                        <td><input type="tel" name="tlf" id="tlf"></td>
+                        <td><input type="tel" name="tlf" id="tlf" pattern="^\d{9}$"
+                                placeholder="Introduzca su número de teléfono en formato XXXXXXXXX"></td>
                     </tr>
                 </table>
             </fieldset>
             <fieldset>
                 <table>
-                    <legend><h3>Disponibilidad</h3></legend>
+                    <legend>
+                        <h3>Disponibilidad</h3>
+                    </legend>
                     <tr>
-                        <td><p>Hora</p></td>
-                        <td><p>Fecha</p></td>
+                        <td>
+                            <p>Hora</p>
+                        </td>
+                        <td>
+                            <p>Fecha</p>
+                        </td>
                     </tr>
                     <tr>
                         <td><select name="horaDisp" id="horaDisp"></select></td>
-                        <td><div id="calendar"></div></td>
+                        <td>
+                            <div id="calendar"></div>
+                        </td>
                     </tr>
                 </table>
             </fieldset>
             <fieldset>
+                <legend>¿Cuál es tu motivación para unirte a nuestra organización?</legend>
                 <table>
                     <tr>
-                        <td><input type="submit" name="enviar" id="enviar" value="enviar"></td>
+                        <td>
+                            <select name="motivacion" id="motivacion" multiple>
+                                <option value="participar">Participar en actividades</option>
+                                <option value="preparar">Preparar actividades</option>
+                                <option value="acompañar">Acompañar a un menor</option>
+                                <option value="curiosidad">Curiosidad por la asociación</option>
+                            </select>
+                            <label for="comentarios">
+                                <h4>
+                                    <textarea name="comentarios" id="comentarios" cols="70" rows="5"></textarea>
+                        </td>
                     </tr>
                 </table>
             </fieldset>
-        </form> 
+            <fieldset>
+                <legend>Observaciones</legend>
+                <textarea name="observaciones" id="observaciones" cols="70" rows="5"></textarea>
+            </fieldset>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="tos">Acepto los términos y condiciones.</label>
+                            <!-- // TODO: Añadir términos? -->
+                            <input type="checkbox" name="tos" id="tos" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" name="enviar" id="enviar" value="Enviar">
+                            <input type="reset" name="reset" id="reset">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
     </div>
     <footer>
         <a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a>
@@ -83,4 +128,5 @@
     </footer>
     <script type="text/javascript" src="scripts/registro.js"></script>
 </body>
+
 </html>
