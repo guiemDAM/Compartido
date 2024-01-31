@@ -19,10 +19,68 @@
         </aside>
     </header>
 
-    <div></div>
+    <div> <!-- TODO: Comprobar esto -->
+        <form action="mailto:admin@asociacion.org">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td><input type="text" name="nombre" id="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="apellidos">Apellidos:</label></td>
+                        <td><input type="text" name="apellidos" id="apellidos"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dni">DNI:</label></td>
+                        <td><input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mail">E-mail:</label></td>
+                        <td><input type="email" name="mail" id="mail"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="estado">Estado civil:</label></td>
+                        <td><input type="radio" name="estado" id="estado" value="soltero" checked>
+                            <label for="estado">Soltero</label>
+                            <input type="radio" name="estado" id="estado" value="casado">
+                            <label for="estado">Casado</label>
+                            <input type="radio" name="estado" id="estado" value="divorciado">
+                            <label for="estado">Divorciado</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="tlf">Tlf:</label></td>
+                        <td><input type="tel" name="tlf" id="tlf"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <table>
+                    <legend><h3>Disponibilidad</h3></legend>
+                    <tr>
+                        <td><p>Hora</p></td>
+                        <td><p>Fecha</p></td>
+                    </tr>
+                    <tr>
+                        <td><select name="horaDisp" id="horaDisp"></select></td>
+                        <td><div id="calendar"></div></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td><input type="submit" name="enviar" id="enviar" value="enviar"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form> 
+    </div>
     <footer>
         <a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a>
         <form action="mailto:correo@correo.com"></form>
     </footer>
+    <script type="text/javascript" src="scripts/registro.js"></script>
 </body>
 </html>
