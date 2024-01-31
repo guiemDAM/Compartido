@@ -13,14 +13,15 @@ function crearMes(dia){
     while(mes===dia.getMonth()){
         
         let botonDia = document.createElement("input");
-        botonDia.setAttribute("type", "button");
-        botonDia.setAttribute("name", "dia");
-        botonDia.setAttribute("value", dia.getDate());
         let tdDia = document.createElement("td");
-        botonDia.style.width = "30px";
-        tdDia.style.width = "10px";
-        // botonDia.innerHTML = dia.getDate();
-        botonDia.setAttribute("span", "1");
+
+        Object.assign(botonDia, {
+            type: "button",
+            name: "dia",
+            value: dia.getDate(),
+            style: "width : 30px"
+        });
+
         tdDia.appendChild(botonDia);
         col.appendChild(tdDia);
         dia.setDate(dia.getDate()+1);
@@ -36,7 +37,6 @@ function crearMes(dia){
     return tablaMes;
 }
 
-
 var selHora = document.getElementById('horaDisp');
 
 for (var i = 8; i<=21; i++){
@@ -49,22 +49,6 @@ for (var i = 8; i<=21; i++){
     selHora.appendChild(hora);
     selHora.appendChild(media);
 }
-
-var selDia = document.getElementById('horaDisp');
-
-for (var i = 8; i<=21; i++){
-    var hora = document.createElement('option');
-    var media = document.createElement('option');
-    hora.value = i;
-    hora.innerHTML = i + ":00";
-    media.value = i + 0.5;
-    media.innerHTML = i + ":30";
-    selDia.appendChild(hora);
-    selDia.appendChild(media);
-}
-
-
-
 
 const diaActual = new Date();
 const primerDia = new Date(diaActual.getFullYear(), diaActual.getMonth(), 1);
