@@ -44,6 +44,7 @@ grid-template-areas:
     grid-template-columns: 45% 10% 45%;
     grid-template-areas: 
     "texto1 texto1 texto1";
+    
 }
 .texto_2{
     grid-area:texto2;
