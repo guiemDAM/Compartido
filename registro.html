@@ -79,7 +79,12 @@
                     <tr>
                         <td><select name="horaDisp" id="horaDisp"></select></td>
                         <td>
-                            <div id="calendar"></div>
+                            <div>
+                                <input type="button" value="<" onclick="cambiarMes(false);">
+                                <label id="labelCal"></label>
+                                <input type="button" value=">" onclick="cambiarMes(true);">
+                                <div id="calendar"></div>
+                            </div>
                         </td>
                     </tr>
                 </table>

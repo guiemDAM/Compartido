@@ -1,4 +1,7 @@
 function crearMes(dia){
+    document.getElementById("labelCal").innerText = mayusMinus(
+        dia.toLocaleString('default', { month: 'long' }));
+
     let tablaMes = document.createElement("table");
     let mes = dia.getMonth();
     let col = document.createElement("tr");
@@ -37,6 +40,10 @@ function crearMes(dia){
     return tablaMes;
 }
 
+function mayusMinus(str){
+    return str.charAt(0).toUpperCase()+str.substring(1);
+}
+
 var selHora = document.getElementById('horaDisp');
 
 for (var i = 8; i<=21; i++){
@@ -51,8 +58,16 @@ for (var i = 8; i<=21; i++){
 }
 
 const diaActual = new Date();
-const primerDia = new Date(diaActual.getFullYear(), diaActual.getMonth(), 1);
+var primerDia = new Date(diaActual.getFullYear(), diaActual.getMonth(), 1);
+var mes = diaActual.getMonth();
 
 const calendar = document.getElementById("calendar");
+
+function cambiarMes(mas){
+    mes+=(mas ? +1 : -1);
+    primerDia = new Date(primerDia.getFullYear(), mes, 1);
+    calendar.replaceChildren(crearMes(primerDia));
+}
+
 
 calendar.appendChild(crearMes(primerDia));
