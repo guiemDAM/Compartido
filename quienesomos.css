@@ -1,0 +1,70 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+h1{
+    margin: 0%;
+}
+
+aside {
+    margin-right: auto;
+}
+
+.cuerpo{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 20px;
+background-color: lightskyblue;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 10px 0 10px rgba(0,0,0, 0.4);
+width: 60%;
+margin-top: 20px;
+margin-bottom: 20px;
+grid-template-areas:
+"texto1"
+"texto2"
+"texto3"
+"texto4";
+}
+.texto_1{
+    display: grid;
+    grid-area: texto1;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-areas: 
+    "texto1 texto1 texto1";
+    
+}
+.texto_2{
+    grid-area:texto2;
+}
+.texto_3{
+grid-area: texto3;
+}
+.texto_4 {
+    grid-area: texto4;
+} 
+
+.texto_1, .texto_2, .texto_3, .texto_4{
+margin-bottom: 20px;
+text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
