@@ -70,10 +70,9 @@ grid-template-areas:
 
 .imp{
     text-align: center;
-    display: flex;
     align-self: auto;
     margin: 0;
-    margin-left: 1%;
+    
 }
 
 .no_impd{
