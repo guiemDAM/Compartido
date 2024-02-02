@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    background-color: lightskyblue;
+    backdrop-filter: blur(30px);
     border-radius: 10px;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
     grid-template-areas:
@@ -11,17 +11,22 @@
         "texto3"
         "texto4";
 }
-
+html{
+    background-image: url("/images/bluegradient.webp");
+    background-size: 130%;
+    
+}
 .cuerpo {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    background-color: lightskyblue;
+    background-color: lightblue;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 0 10px rgba(27, 38, 65, 0.4);
     width: 60%;
     margin-top: 20px;
+    
     margin-bottom: 20px;
     grid-template-areas:
         "tit"
@@ -43,6 +48,8 @@
     text-align: center;
     font-size: 3em;
     align-self: center;
+    color: whitesmoke;
+    
 }
 
 .titulo_izq {
@@ -78,4 +85,10 @@
     align-self: flex-end;
     margin: 0;
     margin-bottom: 2%;
+}
+.villablanca a{
+    text-decoration: none;
+    color: whitesmoke;
+    
+    
 }
