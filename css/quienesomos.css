@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    background-color: lightskyblue;
+    background-color:rgba(173, 216, 230, 0.8);
     border-radius: 10px;
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
     grid-template-areas:
         "texto1"
         "texto2"
@@ -17,7 +17,6 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     background-color: lightskyblue;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
     width: 60%;
@@ -26,6 +25,16 @@
     grid-template-areas:
         "tit"
         "desc"
+        "tit"
+        "desc"
+        "tit"
+        "desc"
+        "tit"
+        "desc";
+    align-self: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .titulo {
@@ -78,4 +87,15 @@
     align-self: flex-end;
     margin: 0;
     margin-bottom: 2%;
+}
+
+.descripcion{
+    display: grid;
+    grid-template-areas: none;
+    align-items: center;
+    align-self: center;
+}
+
+.texto{
+    text-align: center;
 }
