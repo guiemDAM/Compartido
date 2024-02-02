@@ -40,27 +40,53 @@ grid-template-areas:
 .titulo {
     display: grid;
     grid-gap: 0;
-    grid-template-columns: 45% 10% 45%;
+    grid-template-columns: 47.5% 5% 47.5%;
     grid-template-areas:
-        "tit tit tit";
+        "izq tit der";
+    align-items: center;
+    
 }
 
 .titulo_letra {
     grid-area: tit;
     text-align: center;
-    font-size: 3em; /* Adjust the font size as needed */
+    font-size: 3em;
+    align-self: center;
 }
 
 .titulo_izq {
-    grid-area: tit;
-    text-align: left;
+    grid-area: izq;
+    text-align: right;
     margin: 0;
+    align-self: end;
 }
 
 .titulo_der {
-    grid-area: tit;
-    text-align: right;
+    grid-area: der;
+    text-align: left;
     margin: 0;
+    align-self: end;
+}
+
+.imp{
+    text-align: center;
+    display: flex;
+    align-self: auto;
+    margin: 0;
+    margin-left: 1%;
+}
+
+.no_impd{
+    text-align: right;
+    align-self: flex-end;
+    margin: 0;
+    margin-bottom: 2%;
+}
+.no_impi{
+    text-align: left;
+    align-self: flex-end;
+    margin: 0;
+    margin-bottom: 2%;
 }
 
 
