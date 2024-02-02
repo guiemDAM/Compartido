@@ -1,0 +1,104 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+h1{
+    margin: 0%;
+}
+
+aside {
+    margin-right: auto;
+}
+
+.cuerpo{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 20px;
+background-color: lightskyblue;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 10px 0 10px rgba(0,0,0, 0.4);
+width: 60%;
+margin-top: 20px;
+margin-bottom: 20px;
+grid-template-areas:
+"tit"
+"desc"
+}
+
+.titulo {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 47.5% 5% 47.5%;
+    grid-template-areas:
+        "izq tit der";
+    align-items: center;
+    
+}
+
+.titulo_letra {
+    grid-area: tit;
+    text-align: center;
+    font-size: 3em;
+    align-self: center;
+}
+
+.titulo_izq {
+    grid-area: izq;
+    text-align: right;
+    margin: 0;
+    align-self: end;
+}
+
+.titulo_der {
+    grid-area: der;
+    text-align: left;
+    margin: 0;
+    align-self: end;
+}
+
+.imp{
+    text-align: center;
+    align-self: auto;
+    margin: 0;
+    
+}
+
+.no_impd{
+    text-align: right;
+    align-self: flex-end;
+    margin: 0;
+    margin-bottom: 2%;
+}
+.no_impi{
+    text-align: left;
+    align-self: flex-end;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+
+
+.texto_1, .texto_2, .texto_3, .texto_4{
+margin-bottom: 20px;
+text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
