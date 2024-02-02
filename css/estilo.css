@@ -1,3 +1,49 @@
-h1 {
-    color: aqua;
+html, body {
+    height: 99%;
+    width: 99%;
+}
+
+.mainDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.centerDiv {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    max-height: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+}
+
+#fotoLogo {
+    height: 50%;
+    width: 50%;
+}
+
+
+footer {
+    max-height: fit-content;
+    height: fit-content;
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
 }
