@@ -2,7 +2,7 @@ input[type="button"], input[type="reset"], input[type="reset"] {
     backdrop-filter: blur(15px);
     opacity: 70%;
     background: none;
-    border-radius: 20%;
+    border-radius: 4px;
 }
 
 html {
@@ -29,13 +29,21 @@ body {
     margin-top: 10px;
     
     backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-input[type="text"], input[type="tel"], input[type="email"] {
+input[type="text"], input[type="tel"], input[type="email"], textarea, select {
     background-color: rgba(37, 37, 37, 0.137);
 }
 
 table {
+    
+    
     
 }
 
@@ -49,8 +57,16 @@ table {
     height: fit-content;
     
     padding: 8px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    text-align: center;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+    
+    padding-block: calc(1em + 2px);
+
+    padding-inline: calc(1em + 10px);
+    
+    
 }
