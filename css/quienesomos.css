@@ -1,10 +1,23 @@
+@font-face {
+    font-family: 'ahdn';
+    src: url('../fonts/Ahdn-4yyB.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lost';
+    src: url('../fonts/LostFish-5DOz.ttf') format('truetype');
+}
+
+
+
 body {
-    background-image:url('images/fondo0.1.gif');
-    background-size:100%;
-    background-repeat: repeat-y;
+    background-image:url('../images/fondo0.1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    height:100%;
-    width:100%;
+    height: 100vh;
+    padding:0;
+    margin:0;
 
 }
 
@@ -28,6 +41,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     border-radius: 10px;
+    background-color:rgba(57, 104, 246, 0.3);
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
     width: 60%;
     margin-top: 20px;
@@ -54,6 +68,7 @@ body {
     grid-template-areas:
         "izq tit der";
     align-items: center;
+    
 
 }
 
@@ -62,6 +77,15 @@ body {
     text-align: center;
     font-size: 3em;
     align-self: center;
+    font-family: 'lost';
+    color: aquamarine;
+    font-size: 100px;
+}
+
+.titulo_izq, .titulo_der{
+    font-family: 'ahdn';
+    font-size: 50px;
+    color: aliceblue;
 }
 
 .titulo_izq {
@@ -69,6 +93,7 @@ body {
     text-align: right;
     margin: 0;
     align-self: end;
+
 }
 
 .titulo_der {
@@ -110,5 +135,8 @@ body {
 .texto {
     text-align: center;
     max-width: 70%;
-    margin: 0 auto; /* Alinea el bloque al centro horizontalmente */
+    margin: 0 auto; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 0.8);
 }
