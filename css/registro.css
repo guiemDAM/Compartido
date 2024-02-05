@@ -76,6 +76,14 @@ table {
     font-size: 1.2em;
 }
 
+label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
 *{
     
 }

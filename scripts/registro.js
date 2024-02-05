@@ -78,4 +78,15 @@ function setEsCivil(div){
         divs[i].style = "background-color : red";
     }
     div.style = "background-color : green";
+
+    var radios = document.getElementsByName('estado');
+
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                var selectedValue = radios[i].value;
+                alert("Selected Value: " + selectedValue);
+                break;
+            }
+        }
+
 }
