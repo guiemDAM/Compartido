@@ -1,8 +1,19 @@
+body {
+    background-image:url('images/fondo0.1.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+
+}
+
+
+
 .centerDiv {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    background-color:rgba(173, 216, 230, 0.8);
     border-radius: 10px;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
     grid-template-areas:
@@ -16,7 +27,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    background-color: lightskyblue;
     border-radius: 10px;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
     width: 60%;
