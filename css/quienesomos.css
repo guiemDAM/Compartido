@@ -2,25 +2,29 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(50px);
     border-radius: 10px;
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 20px 0 20px rgba(0, 0, 0, 0.4);
     grid-template-areas:
         "texto1"
         "texto2"
         "texto3"
         "texto4";
 }
+@font-face {
+    font-family: idea;
+    src: url("/css/Rakeny-Regular.otf");
+}
 html{
-    background-image: url("/images/bluegradient.webp");
-    background-size: 130%;
+    background-image: url("/images/diseño.jpg");
+    background-size: 100%;
     
 }
 .cuerpo {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    background-color: lightblue;
+    background-color: rgba(255, 255, 255,0.5);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 10px 0 10px rgba(27, 38, 65, 0.4);
@@ -47,8 +51,9 @@ html{
     grid-area: tit;
     text-align: center;
     font-size: 3em;
+    font-family: idea;
     align-self: center;
-    color: whitesmoke;
+    color: black;
     
 }
 
@@ -70,6 +75,7 @@ html{
     text-align: center;
     align-self: auto;
     margin: 0;
+    
 
 }
 
@@ -87,8 +93,9 @@ html{
     margin-bottom: 2%;
 }
 .villablanca a{
+    font-family: idea;
     text-decoration: none;
-    color: whitesmoke;
+    color: black;
     
     
 }
