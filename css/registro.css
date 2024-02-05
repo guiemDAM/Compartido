@@ -23,7 +23,7 @@ body {
 }
 
 .fieldset {
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.747);
     border-radius: 30px;
     padding: 20px;
     margin-top: 10px;
@@ -39,6 +39,8 @@ body {
 
 input[type="text"], input[type="tel"], input[type="email"], textarea, select {
     background-color: rgba(37, 37, 37, 0.137);
+    border-color: #9b2400;
+    border-radius: 3px;
 }
 
 table {
@@ -53,6 +55,8 @@ table {
     
     backdrop-filter: blur(5px);
 
+    background-color: #000013da;
+
     max-height: fit-content;
     height: fit-content;
     
@@ -62,11 +66,16 @@ table {
     flex-direction: row;
     justify-content: space-between;
 
-    
-    
     padding-block: calc(1em + 2px);
-
     padding-inline: calc(1em + 10px);
-    
+       
+}
+
+.campo label {
+    color: rgb(255, 252, 232);
+    font-size: 1.2em;
+}
+
+*{
     
 }

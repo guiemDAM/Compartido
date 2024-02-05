@@ -42,14 +42,19 @@
                             <input type="email" name="mail" id="mail" required></div></td>
                         </tr>
                         <tr>
-                            <td><div class="campo"><label for="estado">Estado civil:</label>
-                            <div><input type="radio" name="estado" id="estado" value="soltero" checked>
-                                <label for="estado">Soltero</label></div>
-                                <div><input type="radio" name="estado" id="estado" value="casado">
-                                    <label for="estado">Casado</label></div>
-                                <div><input type="radio" name="estado" id="estado" value="divorciado">
-                                    <label for="estado">Divorciado</label></div>
-                            </div></td>
+                            <td>
+                                <div class="campo"><label for="estado">Estado civil:</label>
+                                    <div class="radioEsCivil" id="radioEsCivil1"><input type="radio" name="estado" id="estado" value="soltero" checked onclick="setEsCivil(radioEsCivil1)">
+                                        <label for="estado">Soltero</label>
+                                    </div>
+                                    <div class="radioEsCivil" id="radioEsCivil2"><input type="radio" name="estado" id="estado" value="casado" onclick="setEsCivil(radioEsCivil2)">
+                                        <label for="estado">Casado</label>
+                                    </div>
+                                    <div class="radioEsCivil" id="radioEsCivil3"><input type="radio" name="estado" id="estado" value="divorciado" onclick="setEsCivil(radioEsCivil3)">
+                                        <label for="estado">Divorciado</label>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td><div class="campo"><label for="tlf">Tlf:</label>
