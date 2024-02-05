@@ -28,12 +28,27 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     border-radius: 10px;
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
     grid-template-areas:
         "texto1"
         "texto2"
         "texto3"
         "texto4";
+}
+
+.quienesomos{
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr; /* Tres columnas: izquierda, cuerpo y derecha */
+    margin: 20px;
+    grid-template-areas: "izquierda cuerpo derecha";
+}
+
+.imagen_der {
+    grid-area: derecha;
+}
+
+.imagen_der img {
+    width: 100%;
+    height: auto;
 }
 
 .cuerpo {
@@ -42,8 +57,7 @@ body {
     gap: 20px;
     border-radius: 10px;
     background-color:rgba(57, 104, 246, 0.3);
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
-    width: 60%;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 200px;
     grid-template-areas:
@@ -59,6 +73,7 @@ body {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .titulo {
@@ -139,4 +154,13 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 27px;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.imagen_izq {
+    grid-area: izquierda;
+}
+
+.imagen_izq img {
+    width: 100%;
+    height: auto;
 }
