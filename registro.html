@@ -43,16 +43,16 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="campo"><label for="estado">Estado civil:</label>
-                                    <div class="radioEsCivil" id="radioEsCivil1"><input type="radio" name="estado" id="soltero" value="soltero" checked>
-                                        <label for="soltero" onclick="setEsCivil(radioEsCivil1)">Soltero</label>
-                                    </div>
-                                    <div class="radioEsCivil" id="radioEsCivil2"><input type="radio" name="estado" id="casado" value="casado">
-                                        <label for="casado" onclick="setEsCivil(radioEsCivil2)">Casado</label>
-                                    </div>
-                                    <div class="radioEsCivil" id="radioEsCivil3"><input type="radio" name="estado" id="divorciado" value="divorciado">
-                                        <label for="divorciado" onclick="setEsCivil(radioEsCivil3)">Divorciado</label>
-                                    </div>
+                                <div class="campo" id="campoEstado">
+                                    <label for="estado">Estado civil:</label>
+                                    <input type="radio" name="estado" id="soltero" value="soltero" checked>
+                                    <label for="soltero" id="labelsoltero" onclick="setEsCivil(labelsoltero)" class="labelEstado">Soltero</label>
+
+                                    <input type="radio" name="estado" id="casado" value="casado">
+                                    <label for="casado" id="labelcasado" onclick="setEsCivil(labelcasado)" class="labelEstado">Casado</label>
+                                
+                                    <input type="radio" name="estado" id="divorciado" value="divorciado">
+                                    <label for="divorciado" id="labeldivorciado" onclick="setEsCivil(labeldivorciado)" class="labelEstado">Divorciado</label>
                                 </div>
                             </td>
                         </tr>
@@ -115,7 +115,7 @@
                             <td><div class="campo">
                                 <label for="tos">Acepto los términos y
                                     condiciones.</label>
-                                <!-- // TODO: Añadir términos? -->
+                                <!-- TODO: Añadir términos? -->
                                 <input type="checkbox" name="tos" id="tos" required>
                             </div></td>
                         </tr>

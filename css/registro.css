@@ -71,6 +71,10 @@ table {
        
 }
 
+#campoEstado label {
+    padding-right: 10px;
+}
+
 .campo label {
     color: rgb(255, 252, 232);
     font-size: 1.2em;

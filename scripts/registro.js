@@ -73,20 +73,11 @@ function cambiarMes(mas){
 calendar.appendChild(crearMes(primerDia));
 
 function setEsCivil(div){
-    let divs = document.getElementsByClassName("radioEsCivil");
+    let divs = document.getElementsByClassName("labelEstado");
     for(let i = 0; i < divs.length; i++) {
         divs[i].style = "background-color : red";
     }
-    div.style = "background-color : green";
 
-    var radios = document.getElementsByName('estado');
-
-        for (var i = 0; i < radios.length; i++) {
-            if (radios[i].checked) {
-                var selectedValue = radios[i].value;
-                alert("Selected Value: " + selectedValue);
-                break;
-            }
-        }
+    div.style = "background-color : green";    
 
 }
