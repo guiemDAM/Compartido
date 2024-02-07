@@ -1,0 +1,93 @@
+input[type="button"], input[type="reset"], input[type="reset"] {
+    backdrop-filter: blur(15px);
+    opacity: 70%;
+    background: none;
+    border-radius: 4px;
+}
+
+html {
+    background-image: url("/images/backtest.jpeg");
+    background-size: 200%;
+}
+
+header {
+    backdrop-filter: blur(100%);
+    background-color: rgba(0, 0, 0, 0.295);
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+body {
+    background: none;
+}
+
+.fieldset {
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 10px;
+    
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+    background-color: rgba(37, 37, 37, 0.137);
+    border-color: #9b2400;
+    border-radius: 3px;
+}
+
+table {
+    
+    
+    
+}
+
+.campo {
+    border-radius: 5px 5px;
+    border: 1px rgba(0, 0, 0, 0.199) solid;
+    
+    backdrop-filter: blur(5px);
+
+    background-color: #000013da;
+
+    max-height: fit-content;
+    height: fit-content;
+    
+    padding: 8px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-block: calc(1em + 2px);
+    padding-inline: calc(1em + 10px);
+       
+}
+
+#campoEstado label {
+    padding-right: 10px;
+}
+
+.campo label {
+    color: rgb(255, 252, 232);
+    font-size: 1.2em;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+*{
+    
+}
