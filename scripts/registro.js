@@ -22,8 +22,9 @@ function crearMes(dia){
             type: "button",
             name: "dia",
             value: dia.getDate(),
-            style: "width : 30px"
         });
+
+        botonDia.classList.add("diaCalendario");
 
         tdDia.appendChild(botonDia);
         col.appendChild(tdDia);
