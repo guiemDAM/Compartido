@@ -1,124 +1,147 @@
 html, body {
-    height: 99%;
-    width: 99%;
+  height: 99%;
+  width: 99%;
 
-    background: linear-gradient(300deg,#e9a27c,#e7bba6,#8cb6bc,#0e8992,#0d313a,#0d313a);
-    background-size: 400%;
-    animation: gradient-animation 18s ease infinite;
-    opacity: 100%;
-    background-size:400% 400%;
-   
-    font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(300deg, #e9a27c, #e7bba6, #8cb6bc, #0e8992, #0d313a, #0d313a);
+  background-size: 400%;
+  animation: gradient-animation 18s ease infinite;
+  opacity: 100%;
+  background-size: 400% 400%;
+
+  font-family: Arial, Helvetica, sans-serif;
 
 }
+
 @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
   }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .mainDiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr auto;
-    min-height: 100%;
-    min-width: 100%;
-    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr 7vh;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .centerDiv {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 2;
-    max-height: 100%;
-    min-height: 100%;
-    height: 100%;
-    
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 2;
+  max-height: 100%;
+  min-height: 100%;
+  height: 100%;
 }
 
 header {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
-    font-family: louis;
-    background: rgba(255, 255, 255, 0.22);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17.3px);
-    border: 0.5px solid rgba(255, 255, 255, 0.33);
+  font-family: Louis;
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  display: grid;
+  grid-template-columns: 10% repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
+
+  height: fit-content;
+  padding-block: 0.8%;
+
+  border-radius: 16px;
+  border: 0.5px solid rgba(255, 255, 255, 0.33);
+
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17.3px);
 }
 
 header a {
-    text-decoration: none;
-    font-size: 1.8em;
+  text-decoration: none;
+  font-size: 1.8em;
+  font-size: 1.7vw;
+}
+
+.headerBtn {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17.3px);
+  padding-block: 0.5vw;
+  margin-inline: 1.5vw;
+
+  max-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #fotoLogo {
-    width: 80%;
-    height: 20%;
-    width: 20%;
-
+  width: 50%;
 }
 
+#aLogo {
+  border-style: none;
+  box-shadow: none;
+  background: none;
+}
 
 footer {
-    max-height: fit-content;
-    height: fit-content;
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    text-align: center;
+  max-height: fit-content;
+  height: fit-content;
+
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
 }
-.villablanca a{
+
+footer a {
   text-decoration: none;
   color: whitesmoke;
-  font-family: noctado;
+  font-family: Noctado;
 }
-.mainDiv a{
+
+.mainDiv a {
   text-decoration: none;
   color: whitesmoke;
-  
 }
+
 @font-face {
-  font-family: noctado;
+  font-family: Noctado;
   src: url("/css/fuentes/NOCTADO.otf");
 }
+
 @font-face {
-  font-family: louis;
+  font-family: Louis;
   src: url("/css/fuentes/Louis George Cafe.ttf");
 }
 
-a{
-  background: rgba(255, 255, 255, 0.22);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17.3px);
-    padding: 15px;
-    margin:20px;
+
+
+input[type="submit"] {
+  background: rgb(247, 150, 192);
+  background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
 }
-.boton input{
-  background: rgb(247,150,192);
-  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
-    line-height: 42px;
-    padding: 0;
-    border: none;
-}
-.boton input value{
+
+.boton input value {
   position: relative;
   display: block;
   width: 100%;
