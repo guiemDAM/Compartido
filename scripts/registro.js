@@ -71,3 +71,13 @@ function cambiarMes(mas){
 
 
 calendar.appendChild(crearMes(primerDia));
+
+function setEsCivil(div){
+    let divs = document.getElementsByClassName("labelEstado");
+    for(let i = 0; i < divs.length; i++) {
+        divs[i].style = "background-color : red";
+    }
+
+    div.style = "background-color : green";    
+
+}
