@@ -1,24 +1,14 @@
-const backgroundVideo = document.getElementById('fondo');
+// Get the video container element
+const videoContainer = document.getElementById("caja_video");
 
-// Store the initial scroll position
-let prevScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+// Add event listener for scroll
+window.addEventListener("scroll", function() {
+    // Calculate the scroll percentage
+    const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
-// Add scroll event listener
-window.addEventListener('scroll', function() {
-    // Get the current scroll position
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the new top position of the video container
+    const newTop = scrollPercentage * (document.documentElement.scrollHeight - window.innerHeight);
 
-    // Check the scroll direction
-    const scrollDirection = currentScrollPosition > prevScrollPosition ? 'down' : 'up';
-
-    // Update the position of the background video based on the scroll direction
-    if (scrollDirection === 'down') {
-        // Move the background video down
-        backgroundVideo.style.top = `-${currentScrollPosition}px`;
-    } else {
-        // Move the background video up
-        backgroundVideo.style.top = `0px`;
-    }
-
-    // Update the previous scroll position
-    prevScrollPosition = currentScrollPosition;  });
+    // Set the new top position
+    videoContainer.style.top = `-${newTop}px`;
+});
