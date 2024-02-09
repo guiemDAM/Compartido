@@ -10,20 +10,35 @@
 
 
 
-body {
-    background-image:url('../images/fondo0.1.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    padding:0;
-    margin:0;
-
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 
+.background-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#fondo {
+    min-width: 100%; 
+    min-height: 100%;
+}
+
 
 .centerDiv {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2000px;
+    padding: 50px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -37,13 +52,19 @@ body {
 
 .quienesomos{
     display: grid;
-    grid-template-columns: 1fr 60% 1fr; /* Tres columnas: izquierda, cuerpo y derecha */
+    z-index: 1;
+    grid-template-columns: 1fr 60% 1fr;
     margin: 20px;
     grid-template-areas: "izquierda cuerpo derecha";
+    align-items:center;
+    height: 100vh;
+    margin-top: 0;
+    position: static;
 }
 
 .imagen_der {
     grid-area: derecha;
+    margin-top: 150px;
 }
 
 .imagen_der img {
@@ -55,10 +76,11 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+    position: relative;
     border-radius: 10px;
     background-color:rgba(57, 104, 246, 0.3);
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 200px;
     grid-template-areas:
         "tit"
@@ -158,6 +180,8 @@ body {
 
 .imagen_izq {
     grid-area: izquierda;
+    margin-top: 0;
+    margin-top: 150px;
 }
 
 .imagen_izq img {
