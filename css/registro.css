@@ -61,6 +61,7 @@ table {
     -webkit-backdrop-filter: blur(17.3px);
 
     background-color: #000013da;
+    color: white;
 
     display: flex;
     flex-direction: row;
@@ -69,6 +70,17 @@ table {
     padding-block: calc(1em);
     padding-inline: calc(1em);
 
+}
+
+#fieldDisp .campo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#fieldDisp select {
+    color: white;
+    width: 100%;
 }
 
 .labelEstado {

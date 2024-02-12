@@ -81,39 +81,26 @@
                         </tr>
                     </table>
                 </div>
-                <div class="fieldset">
-                    <table>
-                        <h3 class="legend">Disponibilidad</h3>
-                        <tr>
-                            <td>
-                                <div class="campo">
-                                    <p>Hora</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="campo">
-                                    <p>Fecha</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo"><select name="horaDisp" id="horaDisp"></select></div>
-                            </td>
-                            <td>
-                                <div class="campo">
-                                    <div>
-                                        <div id="botonesMes" class="campo">
-                                            <input type="button" value="<" onclick="cambiarMes(false);">
-                                            <label id="labelCal"></label>
-                                            <input type="button" value=">" onclick="cambiarMes(true);">
-                                        </div>
-                                        <div id="calendar"></div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="fieldset" id="fieldDisp">
+                    <h3 class="legend">Disponibilidad</h3>
+                    <div class="campo">
+                        
+                        
+                        <select name="horaDisp" id="horaDisp"></select>
+                    </div>
+                    <div class="campo">
+                        
+                        
+                        <div>
+                            <div id="botonesMes" class="campo">
+                                
+                                <input type="button" value="<" onclick="cambiarMes(false);">
+                                <label id="labelCal"></label>
+                                <input type="button" value=">" onclick="cambiarMes(true);">
+                            </div>
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="fieldset">
                     <h3 class="legend">¿Cuál es tu motivación para unirte a nuestra organización?</h3>

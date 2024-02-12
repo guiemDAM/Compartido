@@ -29,7 +29,7 @@ html, body {
 .mainDiv {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 80vh 7vh;
+  grid-template-rows: auto auto 7vh;
   min-height: 100%;
   min-width: 100%;
 }
