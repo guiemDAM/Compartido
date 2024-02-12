@@ -1,3 +1,13 @@
+@font-face {
+    src: url("css/fonts/Louis-George-Cafe.ttf");
+    font-family: 'Louis';
+  }
+  
+@font-face {
+    src: url("css/fonts/NOCTADO.otf");
+    font-family: 'Noctado';
+  }
+  
 body, html {
     width: 100%;
     height: 100%;
@@ -6,8 +16,8 @@ body, html {
 }
 /*Hecho por guille*/
 header {
-    font-family: Louis;
-  
+    font-family: 'Louis';
+    
     grid-column-start: 1;
     grid-column-end: 4;
   
@@ -83,16 +93,7 @@ header {
     color: whitesmoke;
   }
   
-  @font-face {
-    font-family: Noctado;
-    src: url("/css/fuentes/NOCTADO.otf");
-  }
-  
-  @font-face {
-    font-family: Louis;
-    src: url("/css/fuentes/Louis George Cafe.ttf");
-  }
-  
+
   
   
   input[type="submit"] {
@@ -195,6 +196,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    font-family: "louis";
 }
 
 .titulo {
@@ -272,7 +274,7 @@ header {
     text-align: center;
     max-width: 70%;
     margin: 0 auto; 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Louis';
     font-size: 27px;
     color: rgba(255, 255, 255, 0.8);
 }
