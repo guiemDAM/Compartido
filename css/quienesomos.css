@@ -73,7 +73,6 @@ header {
   footer {
     max-height: fit-content;
     height: fit-content;
-  
     grid-row: 3;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -136,32 +135,28 @@ header {
 }
 
 .centerDiv {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 2000px;
-    padding: 50px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    border-radius: 10px;
-    grid-template-areas:
-        "texto1"
-        "texto2"
-        "texto3"
-        "texto4";
+  z-index: 1;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr; /* Change from repeat(1fr) to 1fr */
+  grid-template-rows: auto 1fr; /* Added grid-template-rows */
+  gap: 20px;
+  border-radius: 10px;
+  grid-template-areas:
+      "quienesomos"
+      "mtt";
 }
 
 .quienesomos{
-
+    grid-area: quienesomos;
     display: grid;
     z-index: 1;
     grid-template-columns: 1fr 60% 1fr;
     margin: 20px;
     grid-template-areas: "izquierda cuerpo derecha";
     align-items:center;
-    height: 0;
+    height: auto;
     margin-top: 0;
-    position: static;
 }
 
 .imagen_der {
@@ -296,35 +291,57 @@ header {
     height: auto;
 }
 
+
+#mtt{
+  grid-area: mtt;
+  display: grid;
+  margin-top: 200px;
+  height: auto;
+  min-height: 200px;
+}
+
 #guille {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  "tresd desc_mtt";
   align-items: center;
+  z-index: 4;
 }
 
 #paula{
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  "tresd desc_mtt";
   align-items: center;
+  z-index: 4;
 }
 
 #rosa{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
-  "tresd" "desc_mtt";
+  "tresd desc_mtt";
   align-items: center;
+  z-index: 4;
 
 }
 
 .tresd {
-  grid-area: "tresd";
-  width: 200px;
-    height: 300px;
-    background-color: lightblue;
-    border-radius: 50% 50% 0 0;
-    position: relative;
-    overflow: hidden;
-    margin: 50px auto;
-    transform: rotate(-45deg);
+  grid-area: tresd;
+  border-top-left-radius: 70%; 
+  border-bottom-left-radius: 55%; 
+  border-bottom-right-radius: 70%; 
+  transform: rotate(-45deg); 
+  border: 1px solid rgb(11, 151, 245); 
+  background-color: rgba(0, 255, 255, 0.363); 
+  box-shadow: rgb(55, 78, 102) 0px 15px 25px -10px; 
+  width: 700px; 
+  height: 700px; 
+  margin: 100px; 
+}
+
+.desc_mtt{
+  grid-area: desc_mtt;
 }
