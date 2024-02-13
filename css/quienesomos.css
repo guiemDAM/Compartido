@@ -295,3 +295,36 @@ header {
     width: 100%;
     height: auto;
 }
+
+#guille {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+#paula{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+#rosa{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  "tresd" "desc_mtt";
+  align-items: center;
+
+}
+
+.tresd {
+  grid-area: "tresd";
+  width: 200px;
+    height: 300px;
+    background-color: lightblue;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+    transform: rotate(-45deg);
+}
