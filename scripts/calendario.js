@@ -25,12 +25,6 @@ function crearMes(dia){
 
         botonDia.classList.add("diaCalendario");
 
-        if(index){
-            // Si está en el índice,
-            // añadir popup comprobando lista de actividades con días
-            
-        }
-
         tdDia.appendChild(botonDia);
         col.appendChild(tdDia);
         dia.setDate(dia.getDate()+1);
@@ -51,16 +45,20 @@ function mayusMinus(str){
 }
 
 const diaActual = new Date();
+const index = (window.location.pathname).split("/").pop() == "index.html" ? true : false;
+const calendar = document.getElementById("calendar");
+
 var primerDia = new Date(diaActual.getFullYear(), diaActual.getMonth(), 1);
 var mes = diaActual.getMonth();
-
-const calendar = document.getElementById("calendar");
 
 function cambiarMes(mas){
     mes+=(mas ? +1 : -1);
     primerDia = new Date(primerDia.getFullYear(), mes, 1);
     calendar.replaceChildren(crearMes(primerDia));
+    buscarActiv();
+}
 
+function buscarActiv(){
     if (index) {
         let dias = document.getElementsByClassName("diaCalendario");
 
@@ -72,12 +70,11 @@ function cambiarMes(mas){
 
             if (diaTexto != null) {
                 dias[i].style = "background-color : green"
+                // TODO: Añadir popup o función con la actividad
             }
         }
     }
-
 }
 
-var index = (window.location.pathname).split("/").pop() == "index.html" ? true : false;
-
 calendar.appendChild(crearMes(primerDia));
+buscarActiv();
