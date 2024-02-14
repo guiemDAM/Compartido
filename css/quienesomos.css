@@ -347,3 +347,14 @@ header {
 .desc_mtt{
   grid-area: desc_mtt;
 }
+
+.model-viewer{
+z-index: 12;
+}
+
+
+.pepe{
+  z-index: 15;
+  height: fit-content;
+  width: fit-content;
+}

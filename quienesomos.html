@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="css/quienesomos.css">
     <link rel="stylesheet" href="css/estilo.css">
     <title>¿Quienes somos?</title>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
 <body>
-
-    
-    
     <div id="caja_video">
         <video autoplay muted loop id="fondo">
             <source src="images/altura_total.webm" type="video/webm">
@@ -124,7 +122,7 @@
                         </model-viewer>
                     </div>
                     <div class="desc_mtt">
-
+                        <model-viewer src="medusa rosa copy.glb" alt="3D Model"></model-viewer>
                     </div>
                 </div>
 
@@ -138,13 +136,18 @@
                         </model-viewer>
                     </div>
                     <div class="desc_mtt">
-
+                        <model-viewer src="/modelos/turtle paula ligth.glb"
+                        alt="dumbo octopus"
+                        auto-rotate
+                        camera-controls
+                        background-color="#1abc9c">
+                        </model-viewer>
                     </div>
                 </div>
-                <script type="module" src="/scripts/main.js"></script>
+               
                 <div id="rosa">
                     <div class="tresd">
-                        <model-viewer src="opisthoteuthidae__dumbo_octopus.glb"
+                        <model-viewer src="/modelos/opisthoteuthidae__dumbo_octopus.glb"
                             alt="dumbo octopus"          
                             background-color="#1abc9c">
                             
