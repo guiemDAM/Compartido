@@ -9,8 +9,14 @@ html, body {
   background-size: 400% 400%;
 
   font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+  --background-color: #000013da;
+  --border-color: #ff020279;
 
 }
+
 
 @keyframes gradient-animation {
   0% {
