@@ -102,12 +102,14 @@ input[type="radio"] {
 .diaCalendario {
     width : 100%;
 
-    border-radius: 5px 5px;
+    
     box-shadow: 0px 1px 5px #ff020279;
     border: 2px  #9b2400ad solid;
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
+    
 }
+
 
 #botonesMes {
     padding: 5px;
@@ -126,4 +128,8 @@ input[type="radio"] {
 
 .campo input {
     color: white;
+}
+
+input [type="button"]{
+    border-color: white;
 }
