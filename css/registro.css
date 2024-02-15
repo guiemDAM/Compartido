@@ -8,6 +8,9 @@ input[type="button"], input[type="reset"], input[type="reset"] {
 html {
     background-image: url("/images/backtest.jpeg");
     background-size: 200%;
+
+    --selected-input: green;
+
 }
 
 header {
@@ -40,7 +43,7 @@ body {
 input[type="text"], input[type="tel"], input[type="email"], textarea, select {
     background-color: rgba(37, 37, 37, 0.137);
     border-radius: 5px 5px;
-    border: 2px #9b2400ad solid;
+    border: 2px var(--border-color) solid;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
@@ -60,7 +63,7 @@ table {
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
 
-    background-color: #000013da;
+    background-color: var(--background-color);
     color: white;
 
     display: flex;
