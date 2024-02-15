@@ -73,7 +73,6 @@
     --text-opacity: 100;
     
     color: white;
-
     font-size: 10em;
     
     filter: opacity(var(--text-opacity));
@@ -92,7 +91,7 @@
     transition: left var(--transition);
 
     position: absolute;
-    
+
     color: red;
     font-size: 10em;
     
