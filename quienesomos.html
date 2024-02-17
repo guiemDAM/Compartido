@@ -11,13 +11,14 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
-    <div id="caja_video">
-        <video autoplay muted loop id="fondo">
-            <source src="images/altura_total.webm" type="video/webm">
-        </video>
-    </div>
     <div class="mainDiv">
+        <div id="caja_video">
+            <video autoplay muted loop id="fondo">
+                <source src="images/altura_total.webm" type="video/webm">
+            </video>
+        </div>
         <header>
             <a href="index.html" id="aLogo"><img src="/images/logo.png" alt="" id="fotoLogo"></a>
             <div class="headerBtn"><a href="libre.html">Página libre</a></div>
@@ -27,226 +28,198 @@
         </header>
         <div class="centerDiv">
             <div class="quienesomos">
-                <div class="imagen_izq">
-                    <img src="images/shark_ed1.png" alt="tortugota">
-                    <img src="images/shark2_ed2.png" alt="tiburontote">
-                    <img src="images/shark3_ed2.png" alt="tiburontote">
-                    <img src="images/shark4_ed2.png" alt="tiburontote">
-                    <img src="images/starfish2_ed2.png" alt="estrellita">
-                    <img src="images/starfish3_ed2.png" alt="estrellita">
-                    <img src="images/starfish_ed2.png" alt="estrellita">
-                    <div class="titulo">
-                        <div class="titulo_letra">
-                            <p class="imp">TeaLLife</p>
-                        </div>
-                        <div class="color">
-                            <div class="cuerpo">
-                                <div class="titulo">
-                                    <div class="titulo_letra">
-                                        <p class="imp">T</p>
-                                    </div>
-                                    <div class="titulo_der">
-                                        <p class="no_impi">ección</p>
-                                    </div>
-                                    <div class="titulo_izq">
-                                        <p class="no_impd">pro</p>
-                                    </div>
-                                </div>
-                                <div class="descripcion">
-                                    <p class="texto">Somos un faro de protección en el vasto océano de desafíos que
-                                        enfrentan nuestros amigos acuáticos. Nos comprometemos fervientemente a
-                                        salvaguardar la vida marina, desde las majestuosas ballenas hasta las diminutas
-                                        criaturas que habitan los arrecifes. Nuestra labor abarca desde la prevención de
-                                        la contaminación hasta la preservación de hábitats cruciales. Cada acción que
-                                        emprendemos es un testimonio de nuestra inquebrantable dedicación a la
-                                        protección de la riqueza biológica de los océanos, porque creemos que el futuro
-                                        saludable de nuestro planeta depende de la preservación de estos tesoros
-                                        marinos. Únete a nosotros en este viaje de compromiso y cuidado, donde la
-                                        palabra "protección" cobra vida en cada ola que abrazamos.</p>
-                                </div>
-                                <div class="titulo">
-                                    <div class="titulo_letra">
-                                        <p class="imp">E</p>
-                                    </div>
-                                    <div class="titulo_der">
-                                        <p class="no_impi">rvación</p>
-                                    </div>
-                                    <div class="titulo_izq">
-                                        <p class="no_impd">pres</p>
-                                    </div>
-                                </div>
-                                <div class="descripcion">
-                                    <p class="texto">Nuestra misión se centra en la conservación y protección de la vida
-                                        marina. Trabajamos incansablemente para salvaguardar hábitats cruciales y
-                                        preservar la diversidad biológica de los océanos. Desde la prevención de la
-                                        contaminación hasta la creación de programas de conservación, cada esfuerzo
-                                        refleja nuestra firme dedicación a la preservación marina. Nos esforzamos por
-                                        asegurar un futuro sostenible para las majestuosas criaturas que llaman hogar a
-                                        los vastos océanos. Únete a nosotros en este viaje de compromiso y amor por los
-                                        tesoros marinos que merecen perdurar para las generaciones venideras.</p>
-                                </div>
-                                <div class="titulo">
-                                    <div class="titulo_letra">
-                                        <p class="imp">A</p>
-                                    </div>
-                                    <div class="titulo_der">
-                                        <p class="no_impi">ñas</p>
-                                    </div>
-                                    <div class="titulo_izq">
-                                        <p class="no_impd">camp</p>
-                                    </div>
-                                </div>
-                                <div class="descripcion">
-                                    <p class="texto">En nuestro corazón late la pasión por la vida marina, y nuestras
-                                        campañas son el eco de nuestro compromiso. Unimos esfuerzos para llevar a cabo
-                                        campañas significativas que van más allá de las palabras, trabajando
-                                        incansablemente por la protección y conservación de los animales marinos. Cada
-                                        campaña es un llamado a la acción, un recordatorio de que juntos podemos marcar
-                                        la diferencia. Únete a nosotros en este viaje, donde las campañas se convierten
-                                        en puentes hacia un futuro más brillante para nuestros amigos del océano.</p>
-                                </div>
-                                <div class="titulo">
-                                    <div class="titulo_letra">
-                                        <p class="imp">L</p>
-                                    </div>
-                                    <div class="titulo_der">
-                                        <p class="no_impi">ancia</p>
-                                    </div>
-                                    <div class="titulo_izq">
-                                        <p class="no_impd">vigi</p>
-                                    </div>
-                                </div>
-                                <div class="descripcion">
-                                    <p class="texto">La vigilancia constante es nuestra promesa a los habitantes
-                                        marinos. A través de programas especializados y una dedicación inquebrantable,
-                                        nos convertimos en guardianes de las aguas, supervisando y protegiendo la vida
-                                        acuática. Nuestra labor va más allá de la observación; es un compromiso
-                                        vigilante para garantizar un entorno marino seguro. Únete a nuestra causa, donde
-                                        la vigilancia se convierte en el pilar de nuestro empeño por preservar los
-                                        océanos.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="imagen_der">
-                            <img src="images/turtoise1_ed1.png" alt="tortugota">
-                            <img src="images/Jellyfish1_ed1.png" alt="jellyfish">
-                            <img src="images/jellyfish3_ed1.png" alt="jellyfish">
-                            <img src="images/Jellyfish4_ed1.png" alt="jellyfish">
-                            <img src="images/octopus_ed1.png" alt="pulpote">
-                            <img src="images/planta2_ed2.png" alt="plantota">
-                            <img src="images/planta1_ed1.png" alt="plantota">
-                        </div>
-                    </div>
-                    <div id="mtt">
-                        <div id="guille">
-                            <div class="gota">
-                                <div class="sketchfab-embed-wrapper" style="text-align: center;">
-                                    <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
-                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-                                        web-share
-                                        src="https://sketchfab.com/models/696e939ce00a431eb5820f87366d474c/embed"></iframe>
-                                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                                    <p target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
-                                        "Nuestro CEO Guillermo Barrasa: Liderando la Innovación y la Conservación Marina
-                                        en TEAL"</p>
-                                    <a href="https://sketchfab.com/Nestaeric?utm_medium=embed&utm_campaign=share-popup&utm_content=696e939ce00a431eb5820f87366d474c"
-                                        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Hecho
-                                        by NestaEric</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="desc_mtt">
-                                <h4 class="desc">En TEAL, el liderazgo ejemplar de Guillermo Barrasa nos impulsa a la
-                                    vanguardia de la revolución tecnológica marina, fusionando la innovación con la
-                                    responsabilidad ambiental. Su visión estratégica y su pasión por la conservación nos
-                                    inspiran a desarrollar soluciones pioneras que no solo abordan los desafíos
-                                    energéticos, sino que también protegen y revitalizan nuestros valiosos ecosistemas
-                                    marinos. Bajo su guía, TEAL se erige como un faro de progreso, trabajando
-                                    incansablemente hacia un futuro más limpio, más verde y más sostenible para todos.
-                                </h4>
-                            </div>
-                        </div>
-                        <div id="paula">
-                            <div class="gota">
-                                <div class="sketchfab-embed-wrapper" style="text-align: center;">
-                                    <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
-                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-                                        web-share
-                                        src="https://sketchfab.com/models/0530386d3fef4157b10dbbdb4688e758/embed"></iframe>
-                                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                                    <p target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
-                                        "Nuestra diseñadora gráfica Paula Pérez: Transformando Visiones en Arte Digital"
-                                    </p>
-                                    <a href="https://sketchfab.com/cgsoul?utm_medium=embed&utm_campaign=share-popup&utm_content=0530386d3fef4157b10dbbdb4688e758"
-                                        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Hecho
-                                        by CGSoul</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="desc_mtt">
-                                <h4 class="desc">Destacamos el talento y la creatividad de Paula Pérez, nuestra
-                                    destacada diseñadora gráfica. Con habilidades excepcionales para convertir visiones
-                                    en arte digital cautivador, Pérez es una figura clave en la creación de la estética
-                                    distintiva de nuestra marca. Además de su destreza artística, Pérez es una firme
-                                    defensora de la ética en el diseño, desafiando activamente las prácticas
-                                    discriminatorias y explotadoras en la industria. Garantiza que nuestro trabajo no
-                                    solo sea visualmente impactante, sino también éticamente responsable. Bajo el
-                                    liderazgo de Pérez, TEAL continúa elevando el estándar en el diseño gráfico,
-                                    inspirando a otros a adoptar la autenticidad y la responsabilidad ética en cada
-                                    proyecto.</h4>
-                            </div>
-                        </div>
+                <div class="images_col" id="images_izq">
+                    <img class="img_izq" src="images/about/left/shark_1.png" alt="Foto de un tiburón">
+                    <img class="img_izq" src="images/about/left/shark_2.png" alt="Foto de un tiburón">
+                    <img class="img_izq" src="images/about/left/shark_3.png" alt="Foto de un tiburón">
+                    <img class="img_izq" src="images/about/left/shark_4.png" alt="Foto de un tiburón">
+                    <img class="img_izq" src="images/about/left/starfish_1.png" alt="Foto de una estrella de mar">
+                    <img class="img_izq" src="images/about/left/starfish_2.png" alt="Foto de una estrella de mar">
+                    <img class="img_izq" src="images/about/left/starfish_3.png" alt="Foto de una estrella de mar">
+                </div>
 
-                        <div id="rosa">
-                            <div class="gota">
-                                <div class="sketchfab-embed-wrapper" style="text-align: center;">
-                                    <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
-                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-                                        web-share
-                                        src="https://sketchfab.com/models/ae6b150e50044939aa6a6a6960b1c21d/embed"></iframe>
-                                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                                    <p target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
-                                        "Rosalino Martínez: Orquestando la Excelencia Operativa como COO"</p>
-                                    <a href="https://sketchfab.com/Nestaeric?utm_medium=embed&utm_campaign=share-popup&utm_content=ae6b150e50044939aa6a6a6960b1c21d"
-                                        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Hecho
-                                        by NestaEric</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="desc_mtt">
-                                <h4 class="desc">La excelencia operativa es un pilar fundamental en TEAL, y Rosalino
-                                    Martínez personifica este compromiso con su liderazgo incomparable como COO. Más
-                                    allá de su enfoque en la eficiencia y la calidad, Martínez es reconocido por su
-                                    firme defensa de la vida marina. Su valiente acción para detener varios barcos
-                                    asiáticos que amenazaban a delfines y ballenas demuestra su dedicación no solo a los
-                                    objetivos operativos de TEAL, sino también a la protección de los océanos y sus
-                                    habitantes. Bajo su dirección, TEAL continúa avanzando hacia un futuro donde la
-                                    excelencia operativa y la conservación ambiental van de la mano, liderando el camino
-                                    hacia un mundo más sostenible y compasivo para todos.</h4>
-                            </div>
-                        </div>
+                <div class="col_info">
+                    <div class="titulo_letra">
+                        <p class="imp">TeaLLife</p>
+                    </div>
+                    <div class="titulo">
+                        <p class="letra_minus">pro</p>
+                        <p class="letra_mayus">T</p>
+                        <p class="letra_minus">ección</p>
+                    </div>
+                    <div class="descripcion">
+                        <p class="texto">Somos un faro de protección en el vasto océano de desafíos que
+                            enfrentan nuestros amigos acuáticos. Nos comprometemos fervientemente a
+                            salvaguardar la vida marina, desde las majestuosas ballenas hasta las diminutas
+                            criaturas que habitan los arrecifes. Nuestra labor abarca desde la prevención de
+                            la contaminación hasta la preservación de hábitats cruciales. Cada acción que
+                            emprendemos es un testimonio de nuestra inquebrantable dedicación a la
+                            protección de la riqueza biológica de los océanos, porque creemos que el futuro
+                            saludable de nuestro planeta depende de la preservación de estos tesoros
+                            marinos. Únete a nosotros en este viaje de compromiso y cuidado, donde la
+                            palabra "protección" cobra vida en cada ola que abrazamos.</p>
+                    </div>
+                    <div class="titulo">
+                        <p class="letra_minus">pres</p>
+                        <p class="letra_mayus">E</p>
+                        <p class="letra_minus">rvación</p>
+                    </div>
+                    <div class="descripcion">
+                        <p class="texto">Nuestra misión se centra en la conservación y protección de la vida
+                            marina. Trabajamos incansablemente para salvaguardar hábitats cruciales y
+                            preservar la diversidad biológica de los océanos. Desde la prevención de la
+                            contaminación hasta la creación de programas de conservación, cada esfuerzo
+                            refleja nuestra firme dedicación a la preservación marina. Nos esforzamos por
+                            asegurar un futuro sostenible para las majestuosas criaturas que llaman hogar a
+                            los vastos océanos. Únete a nosotros en este viaje de compromiso y amor por los
+                            tesoros marinos que merecen perdurar para las generaciones venideras.</p>
+                    </div>
+                    <div class="titulo">
+                        <p class="letra_minus">camp</p>
+                        <p class="letra_mayus">A</p>
+                        <p class="letra_minus">ñas</p>
+                    </div>
+                    <div class="descripcion">
+                        <p class="texto">En nuestro corazón late la pasión por la vida marina, y nuestras
+                            campañas son el eco de nuestro compromiso. Unimos esfuerzos para llevar a cabo
+                            campañas significativas que van más allá de las palabras, trabajando
+                            incansablemente por la protección y conservación de los animales marinos. Cada
+                            campaña es un llamado a la acción, un recordatorio de que juntos podemos marcar
+                            la diferencia. Únete a nosotros en este viaje, donde las campañas se convierten
+                            en puentes hacia un futuro más brillante para nuestros amigos del océano.</p>
+                    </div>
+                    <div class="titulo">
+                        <p class="letra_minus">vigi</p>
+                        <p class="letra_mayus">L</p>
+                        <p class="letra_minus">ancia</p>
+                    </div>
+                    <div class="descripcion">
+                        <p class="texto">La vigilancia constante es nuestra promesa a los habitantes
+                            marinos. A través de programas especializados y una dedicación inquebrantable,
+                            nos convertimos en guardianes de las aguas, supervisando y protegiendo la vida
+                            acuática. Nuestra labor va más allá de la observación; es un compromiso
+                            vigilante para garantizar un entorno marino seguro. Únete a nuestra causa, donde
+                            la vigilancia se convierte en el pilar de nuestro empeño por preservar los
+                            océanos.</p>
                     </div>
                 </div>
-                <footer>
-                    <div>
+                <div class="images_col" id="images_der">
+                    <img class="img_der" src="images/about/right/jellyfish_1.png" alt="Foto de una medusa">
+                    <img class="img_der" src="images/about/right/jellyfish_2.png" alt="Foto de una medusa">
+                    <img class="img_der" src="images/about/right/jellyfish_3.png" alt="Foto de una medusa">
+                    <img class="img_der" src="images/about/right/octopus_1.png" alt="Foto de un pulpo">
+                    <img class="img_der" src="images/about/right/plant_1.png" alt="Foto de una planta marina">
+                    <img class="img_der" src="images/about/right/plant_2.png" alt="Foto de una planta marina">
+                    <img class="img_der" src="images/about/right/turtoise_1.png" alt="Foto de una tortuga">
+                </div>
+            </div>
+            <div id="mtt">
+                <div class="members" id="guille">
+                    <div class="gota">
+                        <div class="sketchfab-embed-wrapper" style="text-align: center;">
+                            <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
+                                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                web-share
+                                src="https://sketchfab.com/models/696e939ce00a431eb5820f87366d474c/embed"></iframe>
+                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                            <p target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                                "Nuestro CEO Guillermo Barrasa: Liderando la Innovación y la Conservación Marina
+                                en TEAL"</p>
+                            <a href="https://sketchfab.com/Nestaeric?utm_medium=embed&utm_campaign=share-popup&utm_content=696e939ce00a431eb5820f87366d474c"
+                                target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Hecho
+                                by NestaEric</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc_mtt">
+                        <h4 class="desc">En TEAL, el liderazgo ejemplar de Guillermo Barrasa nos impulsa a la
+                            vanguardia de la revolución tecnológica marina, fusionando la innovación con la
+                            responsabilidad ambiental. Su visión estratégica y su pasión por la conservación nos
+                            inspiran a desarrollar soluciones pioneras que no solo abordan los desafíos
+                            energéticos, sino que también protegen y revitalizan nuestros valiosos ecosistemas
+                            marinos. Bajo su guía, TEAL se erige como un faro de progreso, trabajando
+                            incansablemente hacia un futuro más limpio, más verde y más sostenible para todos.
+                        </h4>
+                    </div>
+                </div>
+                <div class="members" id="paula">
+                    <div class="gota">
+                        <div class="sketchfab-embed-wrapper" style="text-align: center;">
+                            <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
+                                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                web-share
+                                src="https://sketchfab.com/models/0530386d3fef4157b10dbbdb4688e758/embed"></iframe>
+                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                            <p target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                                "Nuestra diseñadora gráfica Paula Pérez: Transformando Visiones en Arte Digital"
+                            </p>
+                            <a href="https://sketchfab.com/cgsoul?utm_medium=embed&utm_campaign=share-popup&utm_content=0530386d3fef4157b10dbbdb4688e758"
+                                target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Hecho
+                                by CGSoul</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc_mtt">
+                        <h4 class="desc">Destacamos el talento y la creatividad de Paula Pérez, nuestra
+                            destacada diseñadora gráfica. Con habilidades excepcionales para convertir visiones
+                            en arte digital cautivador, Pérez es una figura clave en la creación de la estética
+                            distintiva de nuestra marca. Además de su destreza artística, Pérez es una firme
+                            defensora de la ética en el diseño, desafiando activamente las prácticas
+                            discriminatorias y explotadoras en la industria. Garantiza que nuestro trabajo no
+                            solo sea visualmente impactante, sino también éticamente responsable. Bajo el
+                            liderazgo de Pérez, TEAL continúa elevando el estándar en el diseño gráfico,
+                            inspirando a otros a adoptar la autenticidad y la responsabilidad ética en cada
+                            proyecto.</h4>
+                    </div>
+                </div>
 
-                        <form action="mailto:asociacion@dominio.org">
-                            <input type="submit" name="enviar" id="enviar" value="Contacto">
-                        </form>
+                <div class="members" id="rosa">
+                    <div class="gota">
+                        <div class="sketchfab-embed-wrapper" style="text-align: center;">
+                            <iframe frameborder="0" allowfullscreen mozallowfullscreen="true"
+                                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                web-share
+                                src="https://sketchfab.com/models/ae6b150e50044939aa6a6a6960b1c21d/embed"></iframe>
+                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                            <p target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                                "Rosalino Martínez: Orquestando la Excelencia Operativa como COO"</p>
+                            <a href="https://sketchfab.com/Nestaeric?utm_medium=embed&utm_campaign=share-popup&utm_content=ae6b150e50044939aa6a6a6960b1c21d"
+                                target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Hecho
+                                by NestaEric</a>
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <input type="text" name="correo" id="correo">
-                        <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+                    <div class="desc_mtt">
+                        <h4 class="desc">La excelencia operativa es un pilar fundamental en TEAL, y Rosalino
+                            Martínez personifica este compromiso con su liderazgo incomparable como COO. Más
+                            allá de su enfoque en la eficiencia y la calidad, Martínez es reconocido por su
+                            firme defensa de la vida marina. Su valiente acción para detener varios barcos
+                            asiáticos que amenazaban a delfines y ballenas demuestra su dedicación no solo a los
+                            objetivos operativos de TEAL, sino también a la protección de los océanos y sus
+                            habitantes. Bajo su dirección, TEAL continúa avanzando hacia un futuro donde la
+                            excelencia operativa y la conservación ambiental van de la mano, liderando el camino
+                            hacia un mundo más sostenible y compasivo para todos.</h4>
                     </div>
-                    <div>
-                        <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
-                    </div>
-                </footer>
+                </div>
             </div>
         </div>
+        <footer>
+            <div>
+                <form action="mailto:asociacion@dominio.org">
+                    <input type="submit" name="enviar" id="enviar" value="Contacto">
+                </form>
+            </div>
+            <div>
+                <input type="text" name="correo" id="correo">
+                <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+            </div>
+            <div>
+                <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
+            </div>
+        </footer>
     </div>
     <script src="scripts/video.js"></script>
 </body>

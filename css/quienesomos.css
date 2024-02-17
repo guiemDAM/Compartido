@@ -1,133 +1,15 @@
-@font-face {
-    src: url("fonts/Louis-George-Cafe.ttf");
-    font-family: 'Louis';
-  }
-  
-@font-face {
-    src: url("fonts/NOCTADO.otf");
-    font-family: 'Noctado';
-  }
-
-  @font-face {
-    src: url("fonts/against\ regular.otf");
-    font-family: 'Regular';
-  }
-  
-body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html, body {
+    background: none !important;
 }
-/*Hecho por guille*/
-header {
-    z-index: 6;
-    font-family: 'Louis';
-    
-    grid-column-start: 1;
-    grid-column-end: 4;
-  
-    display: grid;
-    grid-template-columns: 10% repeat(4, 1fr);
-    align-items: center;
-    text-align: center;
-  
-    height: fit-content;
-    padding-block: 0.8%;
-  
-    border-radius: 16px;
-    border: 0.5px solid rgba(255, 255, 255, 0.33);
-  
-    background: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17.3px);
-  }
-  
-  header a {
-    text-decoration: none;
-    font-size: 1.8em;
-    font-size: 1.7vw;
-  }
-  
-  .headerBtn {
-    background: rgba(255, 255, 255, 0.22);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17.3px);
-    padding-block: 0.5vw;
-    margin-inline: 1.5vw;
-  
-    max-height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #fotoLogo {
-    width: 50%;
-  }
-  
-  #aLogo {
-    border-style: none;
-    box-shadow: none;
-    background: none;
-  }
-  
-  footer {
-    max-height: fit-content;
-    height: fit-content;
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    text-align: center;
-    z-index: 9;
-  }
-  
-  footer a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-family: Noctado;
-  }
-  
-  .mainDiv a {
-    text-decoration: none;
-    color: whitesmoke;
-  }
-  
 
-  
-  
-  input[type="submit"] {
-    background: rgb(247, 150, 192);
-    background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
-    line-height: 42px;
-    padding: 0;
-    border: none;
-  }
-  
-  .boton input value {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-
-
-/*Hasta aqui*/
-
- 
 #caja_video {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: 100%;
+    
+    max-height: 100%;
     z-index: -1;
 }
 
@@ -135,196 +17,117 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    
     width: 100%;
-    height: auto; /* Set height to auto */
+
+    overflow: hidden;
     object-fit: cover;
 }
 
 .centerDiv {
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
   z-index: 1;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: auto 1fr; 
-  gap: 20px;
-  border-radius: 10px;
-  grid-template-areas:
-      "quienesomos"
-      "mtt";
 }
 
-.quienesomos{
-    grid-area: quienesomos;
+.quienesomos {
+    width: 70%;
     display: grid;
-    z-index: 1;
-    grid-template-columns: 1fr 60% 1fr;
-    grid-template-areas: "izquierda cuerpo derecha";
-    align-items:center;
-    height: auto;
-    margin-top: 0;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: auto;
 }
 
-.imagen_der {
-    grid-area: derecha;
-    margin-top: 150px;
-    min-height: 100%
-}
-
-.imagen_der img {
-    width: 100%;
-    height: auto;
-}
-
-
-.cuerpo {
-    
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    position: relative;
-    border-radius: 10px;
-    background-color:rgba(57, 104, 246, 0.3);
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 100px;
-    grid-template-areas:
-        "tit"
-        "desc"
-        "tit"
-        "desc"
-        "tit"
-        "desc"
-        "tit"
-        "desc";
-    align-self: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    font-family: "louis";
-}
-
-.titulo {
-    display: grid;
-    grid-gap: 0;
-    grid-template-columns: 42.5% 15% 42.5%;
-    grid-template-areas:
-        "izq tit der";
-    align-items: baseline;
-}
-
-.titulo_letra {
-    grid-area: tit;
-    text-align: center;
-    font-size: 3em;
-    font-family: idea;
-    align-self: center;
-    font-family: 'regular';
-    color: aquamarine;
-    font-size: 100px;
-}
-
-.titulo_izq, .titulo_der{
-    font-family: 'Noctado';
-    font-size: 50px;
-    color: aliceblue;
-    text-align: center;
-}
-
-.titulo_izq {
-    grid-area: izq;
-    text-align: right;
-    margin: 0;
-    align-self: end;
-
-}
-
-.titulo_der {
-    grid-area: der;
-    text-align: left;
-    margin: 0;
-    align-self: end;
-}
-
-.imp {
-    text-align: center;
-    align-self: auto;
-    margin: auto;
-}
-
-.no_impd {
-    text-align: right;
-    align-self: flex-end;
-    margin: 0;
-}
-
-.no_impi {
-    text-align: left;
-    align-self: flex-end;
-    margin: 0;
-}
-
-.descripcion{
-    display: grid;
-    grid-template-areas: none;
-    align-items: center;
-    align-self: center;
-    margin-bottom: 100px;
+.descripcion {
+    margin-bottom: 3%;
 }
 
 .texto {
     text-align: center;
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto; 
     font-family: 'Louis';
-    font-size: 27px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
+    color: var(--text-color);
 }
 
-.imagen_izq {
-    grid-area: izquierda;
-    margin-top: 0;
-    margin-top: 150px;
-    min-height: 100%
+.desc {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 1em;
 }
 
-.imagen_izq img {
-    width: 100%;
-    height: auto;
+.col_info {
+    border-radius: 10px;
+    background-color:rgba(57, 104, 246, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letra_minus {
+    font-family: var(--title-font);
+    font-size: 3em;
+    color: aliceblue;
+    padding-inline: 0.2%;
+}
+
+.letra_mayus {
+    font-size: 3em;
+    font-family: var(--title-font);
+    color: aquamarine;
+    padding-inline: 0.3%;
+}
+
+#images_izq {
+    /* Contenedor imagenes izquierda */
+}
+
+.img_izq {
+    /* Imagen izquierda */
+}
+
+#images_der {
+    /* Contenedor imagenes derecha */
+}
+
+.img_der {
+    /* Imagen derecha */
+}
+
+/* Imagenes laterales */
+.images_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Meet the Team */
 
 #mtt {
-  grid-area: mtt;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 20px;
-  height: auto;
-  min-height: 200px;
+    height: 70%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
-#guille, #paula, #rosa {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 20px;
-  height: auto;
-  min-height: 200px;
+.members {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .gota iframe {
-  width: 100%; 
-  height: 500px; 
-}
-
-.desc_mtt {
-  display: grid;
-  align-items: center; /* Centrar verticalmente */
-  height: 60%;
-}
-
-
-.desc {
-  font-family: 'louis';
-  color: white;
-  font-size: 1.9em;
+    height: 100%;
 }
