@@ -1,6 +1,24 @@
+@font-face {
+  font-family: "Noctado";
+  src: url("/css/fonts/NOCTADO.otf");
+}
+
+@font-face {
+  src: url("/css/fonts/Louis-George-Cafe.ttf");
+  font-family: 'Louis';
+}
+
+@font-face {
+  src: url("/css/fonts/Against-Regular.otf");
+  font-family: 'Regular';
+}
+
 html, body {
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
 
   background: linear-gradient(300deg, #e9a27c, #e7bba6, #8cb6bc, #0e8992, #0d313a, #0d313a);
   background-size: 400%;
@@ -14,7 +32,9 @@ html, body {
 *{
   --background-color: #000013da;
   --border-color: #ff020279;
-
+  --title-font: 'Noctado';
+  --text-font: 'Louis';
+  --text-color: white;
 }
 
 
@@ -125,16 +145,6 @@ footer a {
 .mainDiv a {
   text-decoration: none;
   color: whitesmoke;
-}
-
-@font-face {
-  font-family: Noctado;
-  src: url("/css/fuentes/NOCTADO.otf");
-}
-
-@font-face {
-  font-family: Louis;
-  src: url("/css/fuentes/Louis George Cafe.ttf");
 }
 
 
