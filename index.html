@@ -6,18 +6,78 @@
     <meta name="author" content="Paula Pérez Escudero, Rosalino Martínez Albán, Guillermo Rabassa Prados">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/galeria.css">
+    <link rel="stylesheet" href="/css/calendarIndex.css">
     <title>Nombre Asociación</title>
 </head>
 <body>
     <div class="mainDiv">
         <header>
-            <a href="index.html"><img src="images/logotemp.jpg" alt="" id="fotoLogo"></a>
-                    <a href="libre.html">Página libre</a>
-                    <a href="registro.html">Registro</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="quienesomos.html">Sobre nosotros</a>
+            <a href="index.html" id="aLogo"><img src="/images/logo.png" alt="" id="fotoLogo"></a>
+                    <div class="headerBtn"><a href="libre.html">Página libre</a></div>
+                    <div class="headerBtn"><a href="registro.html">Registro</a></div>
+                    <div class="headerBtn"><a href="contacto.html">Contacto</a></div>
+                    <div class="headerBtn"><a href="quienesomos.html">Sobre nosotros</a></div>
         </header>
-        <div class="centerDiv"></div>
+        <div class="centerDiv">
+            <div id="galeriaCentral">
+                <div id="galeriaTop" class="galeria">
+                    <div class="containerImg">
+                        <p class="textImg">T</p>
+
+                        <p class="textExpandedImg" id="4-5-2024">Talleres educativos</p>
+
+                        <img src="/testimages/foto-1.jpg">
+                    </div>
+                    <div class="containerImg">
+                        <p class="textImg">E</p>
+                        <p class="textExpandedImg" id="3-4-2024">Estudiar animales marinos</p>
+                        <img src="/testimages/foto-2.jpg">
+                    </div>
+                    <div class="containerImg">
+                        <p class="textImg">A</p>
+                        <p class="textExpandedImg" id="19-2-2024">A</p>
+                        <img src="/testimages/foto-3.jpg">
+                    </div>
+                    <div class="containerImg">
+                        <p class="textImg">L</p>
+                        <p class="textExpandedImg">Lineado?</p>
+                        <img src="/testimages/foto-4.jpg">
+                    </div>
+                </div>
+                <div id="galeriaBottom" class="galeria">
+                    <div class="containerImg">
+                        <p class="textImg">L</p>
+                        <p class="textExpandedImg">Lest</p>
+                        <img src="/testimages/foto-5.jpg">
+                    </div>
+                    <div class="containerImg">
+                        <p class="textImg">I</p>
+                        <p class="textExpandedImg">Iest</p>
+                        <img src="/testimages/foto-6.jpg">
+                    </div>
+                    <div class="containerImg">
+                        <p class="textImg">F</p>
+                        <p class="textExpandedImg">Test</p>
+                        <img src="/testimages/foto-7.jpg">
+                    </div>
+                    <div class="containerImg">
+                        <p class="textImg">E</p>
+                        <p class="textExpandedImg">Test</p>
+                        <img src="/testimages/foto-8.jpg">
+                    </div>
+                </div>
+            </div>
+        <div id="calendActiv">
+            <input type="button" class="botonesMes" value="<" onclick="cambiarMes(false);">
+
+            <div id="calendActivInt">
+                <label id="labelCal"></label>
+            <div id="calendar"></div>
+            </div>
+            <input type="button" class="botonesMes" value=">" onclick="cambiarMes(true);">
+        </div>
+        </div>
         <footer>
             <div>
                 <form action="mailto:asociacion@dominio.org">
@@ -33,6 +93,6 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="scripts/calendario.js"></script>
 </body>
 </html>
-

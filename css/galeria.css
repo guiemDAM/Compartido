@@ -1,0 +1,97 @@
+#galeriaCentral {
+    --gap: 1vmin;
+    --transition: 0.5s;
+    
+    display: flex;
+    flex-direction: column;
+
+    height: 80vh;
+    max-height: 80vh;
+
+    gap: var(--gap);
+    
+}
+
+.galeria {
+    background-color: rgba(63, 201, 50, 0);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    
+    flex: 1 1 0%;
+
+    transition: flex var(--transition), filter var(--transition);
+
+    max-height: 90%;
+    min-height: 10%;
+}
+
+.galeria:hover {
+    flex: 1 1 100%;
+}
+
+.containerImg img {
+    object-fit: cover;
+
+    height: 100%;
+    width: 100%;
+}
+
+.containerImg {
+    --brightness: 0.75;
+    --grayscale: 1;
+    --text-opacity: 0;
+    --opacity: 0;
+    --left-value: 50% - 10em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+
+    height: 100%;
+
+    flex: 1 1 0%;
+
+    transition: flex var(--transition), filter var(--transition), justify-content var(--transition);
+    
+    
+    overflow: hidden;
+}
+
+.containerImg:hover {
+    --brightness: 1.15;
+    --grayscale: 0;
+    --opacity: 100;
+    --left-value: 0%;
+    flex: 1 0 70%;
+}
+
+.textImg {
+    --text-opacity: 100;
+    
+    color: white;
+    font-size: 10em;
+    
+    filter: opacity(var(--text-opacity));
+    left: var(--left-value);
+
+    transition: left var(--transition); 
+
+    position: absolute;
+
+}
+
+.textExpandedImg {
+    filter: opacity(var(--opacity));
+    left: var(--left-value);
+
+    transition: left var(--transition);
+
+    position: absolute;
+
+    color: red;
+    font-size: 10em;
+}

@@ -10,62 +10,64 @@
     <title>Contacto</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" id="aLogo"><img src="images/logo.png" alt="" id="fotoLogo"></a>
-                <div class="headerBtn"><a href="libre.html">Página libre</a></div>
-                <div class="headerBtn"><a href="registro.html">Registro</a></div>
-                <div class="headerBtn"><a href="contacto.html">Contacto</a></div>
-                <div class="headerBtn"><a href="quienesomos.html">Sobre nosotros</a></div>
-    </header>
-    <div id="contact">
-        <div id="cuerpo">
-            <div id="cuadra">
-                <div id="cuadro01">
-                    <p>1</p>
+    <div class="mainDiv">
+        <header>
+            <a href="index.html" id="aLogo"><img src="/images/logo.png" alt="" id="fotoLogo"></a>
+            <div class="headerBtn"><a href="libre.html">Página libre</a></div>
+            <div class="headerBtn"><a href="registro.html">Registro</a></div>
+            <div class="headerBtn"><a href="contacto.html">Contacto</a></div>
+            <div class="headerBtn"><a href="quienesomos.html">Sobre nosotros</a></div>
+        </header>
+        <div class="centerDiv">
+            <div id="contact">
+                <div id="cuerpo">
+                    <div id="cuadra">
+                        <div id="cuadro01">
+                            <p>1</p>
+                        </div>
+                        <div id="cuadro02">
+                            <p>2</p>
+                        </div>
+                        <div id="cuadro03">
+                            <p>3</p>
+                        </div>
+                        <div id="cuadro04">
+                            <p>4</p>
+                        </div>
+                    </div>
+
                 </div>
-                <div id="cuadro02">
-                    <p>2</p>
+                <div id="form">
+                    <h2>Formulario de contacto</h2>
+                    <form action="#" method="post">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="asunto">Asunto resumido</label>
+                        <textarea id="asunto" name="asunto" required></textarea>
+
+                        <input type="submit" value="Enviar">
+                    </form>
                 </div>
-                <div id="cuadro03">
-                    <p>3</p>
-                </div>
-                <div id="cuadro04">
-                    <p>4</p>
-                </div>
+                <footer>
+                    <div>
+                        <form action="mailto:asociacion@dominio.org">
+                            <input type="submit" name="enviar" id="enviar" value="Contacto">
+                        </form>
+                    </div>
+                    <div>
+                        <input type="text" name="correo" id="correo">
+                        <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+                    </div>
+                    <div>
+                        <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
+                    </div>
+                </footer>
             </div>
-           
         </div>
-        <div id="form">
-            <h2>Formulario de contacto</h2>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="asunto">Asunto resumido</label>
-                <textarea id="asunto" name="asunto" required></textarea>
-
-                <input type="submit" value="Enviar">
-            </form>
-        </div>  
-        
-        <footer>
-            <div>
-                <form action="mailto:asociacion@dominio.org">
-                    <input type="submit" name="enviar" id="enviar" value="Contacto">
-                </form>
-            </div>
-            <div>
-                <input type="text" name="correo" id="correo">
-                <input type="submit" name="enviar" id="enviar" value="Suscribirse">
-            </div>
-            <div>
-                <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
-            </div>
-        </footer>
     </div>
-
 </body>
 </html>
