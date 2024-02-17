@@ -68,3 +68,30 @@
 .campo input {
     color: white;
 }
+
+#popup {
+    z-index: 2;
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    opacity: 0%;
+    translate: -30% -130%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 2px 10px var(--border-color);
+    border: 2px var(--border-color) solid;
+    border-radius: 4px;
+    background-color: var(--background-color);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17.3px);
+    color: white;
+
+    pointer-events: none;
+}
+
+#popupText {
+    font-size: 1em;
+}

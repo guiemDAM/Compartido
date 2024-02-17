@@ -66,6 +66,9 @@ const index = (window.location.pathname).split("/").pop() == "index.html" ? true
 const diaActual = new Date();
 const calendar = document.getElementById("calendar");
 
+const popup = document.createElement("div");
+const textPop = document.createElement("p");
+
 var primerDia = new Date(diaActual.getFullYear(), diaActual.getMonth(), 1);
 var mes = diaActual.getMonth();
 
@@ -77,31 +80,66 @@ function cambiarMes(mas){
     mes+=(mas ? +1 : -1);
     primerDia = new Date(primerDia.getFullYear(), mes, 1);
     calendar.replaceChildren(crearMes(primerDia));
-    buscarActiv();
+    
+    if (index) buscarActiv();
 }
 
 /**
  * Colorea dentro del calendario aquellos días que tengan actividades,
  * usando el id de las actividades del índice.
  */
-function buscarActiv(){
-    if (index) {
-        let dias = document.getElementsByClassName("diaCalendario");
+function buscarActiv() {
+  let dias = document.getElementsByClassName("diaCalendario");
 
-        for (let i = 0; i < dias.length; i++) {
-            let diaTexto = document.getElementById(
-                dias[i].getAttribute("value")
-            + "-" + (mes+1)
-            + "-" + primerDia.getFullYear());
+  for (let i = 0; i < dias.length; i++) {
+    let diaTexto = document.getElementById( 
+        dias[i].getAttribute("value") +
+        "-" + (mes + 1) + "-" + primerDia.getFullYear());
 
-            if (diaTexto != null) {
-                dias[i].style = "background-color : green"
-                // TODO: Añadir popup o función con la actividad
-            }
-        }
+    if (diaTexto != null) {
+        dias[i].style = "background-color : green";
+        dias[i].setAttribute("value", dias[i].getAttribute("value") + " | Actividad");
+    
+        dias[i].parentElement.onmouseover = (e) => mostrarPopup(diaTexto.innerText, dias[i]);
+        dias[i].parentElement.onmouseout = (e) => ocultarPopup();
     }
+  }
+}
+
+/** Crea el popup y lo añade al body */
+function crearPopup() {
+  popup.id = "popup";
+  popup.appendChild(textPop);
+  textPop.innerText = "Hola";
+  textPop.id = "popupText";
+
+  popup.onmouseover = (e) => { popup.style = "opacity : 100%"; };
+  // Si el ratón está encima, no ocultar
+  popup.onmouseout = (e) => { ocultarPopup(); };
+  // Si el ratón se sale, ocultar
+
+  document.getElementsByTagName("body")[0].appendChild(popup);
+}
+
+/** Muestra el popup con el texto y el botón que lo ha llamado */
+function mostrarPopup(text, button) {
+  popup.style = "opacity : 100%";
+  button.parentElement.appendChild(popup);
+  textPop.innerText = text;
+  popup.style.pointerEvents = "all";
+}
+
+/** Oculta el popup */
+function ocultarPopup() {
+    popup.style = "opacity : 0%";
+    popup.style.pointerEvents = "none";
 }
 
 // Inicializa el calendario
 calendar.appendChild(crearMes(primerDia));
-buscarActiv();
+
+if (index) {
+  buscarActiv();
+  crearPopup();
+}
+
