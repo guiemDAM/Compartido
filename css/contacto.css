@@ -117,20 +117,36 @@ input[type="submit"] {
 
 /*Hasta aqui*/
 
-
-#cuerpo{
+#contact {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "cuadra form";
-
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+  grid-template-rows: auto; /* Usar el tamaño de contenido para las filas */
+  gap: 20px; /* Espacio entre las columnas */
 }
 
-#cuadra{
-  grid-area: cuadra;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: 
-  "cuadro01 cuadro02"
-  "cuadro03 cuadro04"; 
+#cuadra {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px; /* Espacio entre los elementos */
 }
 
+#cuadro01 {
+  background-color: lightblue;
+}
+
+#cuadro02 {
+  background-color: lightgreen;
+}
+
+#cuadro03 {
+  background-color: lightcoral;
+}
+
+#cuadro04 {
+  background-color: lightyellow;
+}
+
+#form {
+  padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
+}
