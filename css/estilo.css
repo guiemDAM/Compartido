@@ -15,6 +15,7 @@
 
 .modo_claro {
   --background-color: #000013da;
+  --header-background: rgba(255, 255, 255, 0.22);
   --border-color: rgba(255, 2, 2, 0.47);
   --border-color-low: rgba(255, 2, 2, 0.199);
   --shadow-color: rgba(255, 2, 2, 0.47);
@@ -30,6 +31,7 @@
 .modo_oscuro {
   --background-color: #000013da;
   --border-color: rgba(255, 2, 2, 0.47);
+  --header-background: rgba(0, 0, 0, 0.295);
   --border-color-low: rgba(255, 2, 2, 0.199);
   --shadow-color: rgba(255, 2, 2, 0.47);
   --title-font: 'Noctado';
@@ -106,7 +108,7 @@ header {
   border-radius: 16px;
   border: 0.5px solid rgba(255, 255, 255, 0.33);
 
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--header-background);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(17px);
   -webkit-backdrop-filter: blur(17.3px);
@@ -193,4 +195,10 @@ input:hover, button:hover {
 
 #boton_modo {
   width: 3vw;
+}
+
+h3 {
+  color: var(--text-color);
+  font-size: 1.5em;
+  text-align: center;
 }
