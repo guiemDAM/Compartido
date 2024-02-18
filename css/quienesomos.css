@@ -103,22 +103,6 @@ font-size: 2em;
   padding-inline: 0.3%;
 }
 
-#images_izq {
-  /* Contenedor imagenes izquierda */
-}
-
-.img_izq {
-  /* Imagen izquierda */
-}
-
-#images_der {
-  /* Contenedor imagenes derecha */
-}
-
-.img_der {
-  /* Imagen derecha */
-}
-
 /* Imagenes laterales */
 .images_col {
   display: flex;
