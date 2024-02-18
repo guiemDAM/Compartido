@@ -8,8 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/estilo.css">
     <link rel="stylesheet" href="css/registro.css">
-    <script type="text/javascript" src="scripts/modo.js"></script>
-    <title>Nombre Asociación</title>
+    <title>Registro</title>
 </head>
 
 <body>
@@ -90,11 +89,7 @@
                 <div class="fieldset" id="fieldDisp">
                     <h3 class="legend">Disponibilidad</h3>
                     <div class="campo">
-                        
-                        
                         <select name="horaDisp" id="horaDisp"></select>
-                    </div>
-                    <div class="campo">
                         <div>
                             <div id="botonesMes" class="campo">
                                 
@@ -118,7 +113,7 @@
                                         <option value="acompañar">Acompañar a un menor</option>
                                         <option value="curiosidad">Curiosidad por la asociación</option>
                                     </select>
-                                    <textarea name="comentarios" id="comentarios" cols="70" rows="5"></textarea>
+                                    <textarea name="comentarios" id="comentarios" cols="45" rows="4"></textarea>
                                 </div>
                             </td>
                         </tr>
@@ -164,7 +159,7 @@
                 <input type="submit" name="enviar" id="enviar" value="Suscribirse">
             </div>
             <div>
-                <button onclick="switchModo()">Cambiar Modo</button>
+                <button id="boton_modo"></button>
             </div>
             <div>
                 <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
@@ -173,6 +168,7 @@
     </div>
     <script type="text/javascript" src="scripts/calendario.js"></script>
     <script type="text/javascript" src="scripts/registro.js"></script>
+    <script type="text/javascript" src="scripts/modo.js"></script>
 </body>
 
 </html>
