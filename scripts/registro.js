@@ -20,10 +20,12 @@ function setEsCivil(label){
     let labels = document.getElementsByClassName("labelEstado");
 
     for(let i = 0; i < labels.length; i++) {
-        labels[i].style = "background-color : red"; 
+        labels[i].style = "background-color : var(--unselected-input)"; 
         // Todas las etiquetas coloreadas como deseleccionadas
     }
 
-    label.style = "background-color : green";
+    label.style = "background-color : var(--selected-input)";
     // La etiqueta seleccionada coloreada acorde
 }
+
+setEsCivil(document.getElementById('labelsoltero')); // Por defecto, soltero seleccionado
