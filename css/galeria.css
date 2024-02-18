@@ -32,14 +32,14 @@
     flex: 1 1 100%;
 }
 
-.containerImg img {
+.img_container img {
     object-fit: cover;
 
     height: 100%;
     width: 100%;
 }
 
-.containerImg {
+.img_container {
     --brightness: 0.75;
     --grayscale: 1;
     --text-opacity: 100;
@@ -57,11 +57,11 @@
 
     transition: flex var(--transition), filter var(--transition), justify-content var(--transition);
     
-    
+
     overflow: hidden;
 }
 
-.containerImg:hover {
+.img_container:hover {
     --brightness: 1.15;
     --grayscale: 0;
     --opacity: 1;
@@ -70,7 +70,7 @@
     flex: 1 0 70%;
 }
 
-.textImg {    
+.img_text {    
     color: white;
     font-size: 10em;
     left: var(--left-value);
@@ -79,11 +79,25 @@
     position: absolute;
 }
 
-.textExpandedImg {
+.text_container {
     left: var(--left-value);
     opacity: calc(1 - var(--text-opacity));
     transition: left var(--transition) ease-out;
     position: absolute;
-    color: red;
-    font-size: 10em;
+
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+
+    margin-left: 5%;
+}
+
+.img_text_exp {
+    color: green;
+    font-size: 6em;
+}
+
+.desc_activ {
+    color: rgb(30, 0, 255);
+    font-size: 2em;
 }
