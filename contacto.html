@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Paula Pérez Escudero, Rosalino Martínez Albán, Guillermo Rabassa Prados">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Contacto</title>
 </head>
 <body>
+    <video autoplay muted loop id="videoFondo">
+        <source src="images/Fondo02.webm" type="video/webm">
+    </video>
     <div class="mainDiv">
         <header>
             <a href="index.html" id="aLogo"><img src="/images/logo.png" alt="" id="fotoLogo"></a>
@@ -19,59 +22,80 @@
             <div class="headerBtn"><a href="quienesomos.html">Sobre nosotros</a></div>
         </header>
         <div class="centerDiv">
-            <div id="contact">
-                <div id="cuerpo">
-                    <div id="cuadra">
-                        <div id="cuadro01">
-                            <p>1</p>
-                        </div>
-                        <div id="cuadro02">
-                            <p>2</p>
-                        </div>
-                        <div id="cuadro03">
-                            <p>3</p>
-                        </div>
-                        <div id="cuadro04">
-                            <p>4</p>
-                        </div>
+            <div id="contact"> 
+                <div id="cuadra">
+                    <div id="cuadro01">
+                        <img src="images/mapa.png" alt="Mapa">
+                        <h3 class="comu">Nuestra Ubicación</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d225.08860211629346!2d-76.74734204572368!3d25.49111459998713!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x893aab2b6a2aa965%3A0x4a67e3fc692697b7!2sEleuthera!5e0!3m2!1ses!2ses!4v1708284190863!5m2!1ses!2ses" width="300" height="140" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-
+                    <div id="cuadro02">
+                        <img src="images/telefono.png" alt="Teléfono">
+                        <h3 class="comu">Número de teléfono</h3>
+                        <p>242-352-2144</p>
+                        <p>242-325-5550 </p>
+                    </div>
+                    <div id="cuadro03">
+                        <img src="images/fax.png" alt="Fax">
+                        <h3 class="comu">Fax</h3>
+                        <p>+1 (242) 555-1234</p>
+                    </div>
+                    <div id="cuadro04">
+                        <img src="images/email.png" alt="Email">
+                        <h3 class="comu">Email</h3>
+                        <p>aministracion@tealife.com</p>
+                    </div>
                 </div>
-                <div id="form">
-                    <h2>Formulario de contacto</h2>
-                    <form action="#" method="post">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="asunto">Asunto resumido</label>
-                        <textarea id="asunto" name="asunto" required></textarea>
-
-                        <input type="submit" value="Enviar">
+                <div id="formulario">
+                    <div id="titulo_formulario">
+                        <h2>Formulario de contacto</h2>
+                    </div>
+                    <form id="formulario_org" action="#" method="post">
+                        <div id="inputs">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div>
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div id="asunto">
+                            <label for="asunto">Asunto resumido</label>
+                            <textarea id="asunto" name="asunto" required></textarea>
+                        </div>
+                        <input type="submit" id="enviarasunto" value="Enviar">
                     </form>
+                    <div id="tienda">
+                         <video autoplay muted loop id="videoTienda">
+                          <source src="images/razabarrilazul.webm" type="video/webm">
+                        </video>
+                        <a href="tienda.html">
+                            <h3>No dudes en visitar nuestra tienda</h3>
+                        </a>
+                    </div>
                 </div>
-                <footer>
-                    <div>
-                        <form action="mailto:asociacion@dominio.org">
-                            <input type="submit" name="enviar" id="enviar" value="Contacto">
-                        </form>
-                    </div>
-                    <div id="newsletter">
-                        <input type="text" name="correo" id="correo">
-                        <input type="submit" name="enviar" id="enviar" value="Suscribirse">
-                    </div>
-                    <div>
-                        <button id="boton_modo"></button>
-                    </div>
-                    <div>
-                        <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
-                    </div>
-                </footer>
             </div>
         </div>
     </div>
+    <footer>
+        <div>
+            <form action="mailto:asociacion@dominio.org">
+                <input type="submit" name="enviar" id="enviar" value="Contacto">
+            </form>
+        </div>
+        <div id="newsletter">
+            <input type="text" name="correo" id="correo">
+            <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+        </div>
+                    <div>
+                        <button id="boton_modo"></button>
+                    </div>
+        <div>
+            <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
+        </div>
+    </footer>
     <script type="text/javascript" src="scripts/modo.js"></script>
 </body>
 </html>
