@@ -67,7 +67,7 @@ const diaActual = new Date();
 const calendar = document.getElementById("calendar");
 
 const popup = document.createElement("div");
-const textPop = document.createElement("p");
+const activButton = document.createElement("button");
 
 var mes = diaActual.getMonth();
 var anio = diaActual.getFullYear();
@@ -120,9 +120,9 @@ function buscarActiv() {
 /** Crea el popup y lo añade al body */
 function crearPopup() {
   popup.id = "popup";
-  popup.appendChild(textPop);
-  textPop.innerText = "Hola";
-  textPop.id = "popupText";
+  popup.appendChild(activButton);
+  activButton.innerText = "Apuntarse a la actividad";
+  activButton.id = "popupText";
 
   popup.onmouseover = (e) => { popup.style = "opacity : 100%"; };
   // Si el ratón está encima, no ocultar
@@ -132,11 +132,18 @@ function crearPopup() {
   document.getElementsByTagName("body")[0].appendChild(popup);
 }
 
-/** Muestra el popup con el texto y el botón que lo ha llamado */
+/**
+ * Muestra el popup con la actividad y el botón para apuntarse,
+ * que será mandado al registro con la información de la actividad.
+ * @param {*} text 
+ * @param {*} button 
+ */
 function mostrarPopup(text, button) {
   popup.style = "opacity : 100%";
   button.parentElement.appendChild(popup);
-  textPop.innerText = text;
+  activButton.onclick = (e) => {
+    window.location.href = `registro.html?info=${encodeURIComponent(text)}`;
+  };
   popup.style.pointerEvents = "all";
 }
 
