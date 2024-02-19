@@ -69,8 +69,9 @@ const calendar = document.getElementById("calendar");
 const popup = document.createElement("div");
 const textPop = document.createElement("p");
 
-var primerDia = new Date(diaActual.getFullYear(), diaActual.getMonth(), 1);
 var mes = diaActual.getMonth();
+var anio = diaActual.getFullYear();
+var primerDia = new Date(diaActual.getFullYear(), mes, 1);
 
 /**
  * Cambia el mes del calendario
@@ -78,7 +79,17 @@ var mes = diaActual.getMonth();
  */
 function cambiarMes(mas){
     mes+=(mas ? +1 : -1);
-    primerDia = new Date(primerDia.getFullYear(), mes, 1);
+
+    if (mes < 0) {
+      mes = 11;
+      anio -= 1;
+    } else if (mes > 11) {
+      mes = 0;
+      anio += 1;
+    }
+
+    primerDia = new Date(anio, mes, 1);
+    
     calendar.replaceChildren(crearMes(primerDia));
     
     if (index) buscarActiv();
@@ -98,7 +109,7 @@ function buscarActiv() {
 
     if (diaTexto != null) {
         dias[i].style = "background-color : green";
-        dias[i].setAttribute("value", dias[i].getAttribute("value") + " | Actividad");
+        dias[i].setAttribute("value", dias[i].getAttribute("value") + " | " + diaTexto.innerText);
     
         dias[i].parentElement.onmouseover = (e) => mostrarPopup(diaTexto.innerText, dias[i]);
         dias[i].parentElement.onmouseout = (e) => ocultarPopup();

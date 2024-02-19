@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paula Pérez Escudero, Rosalino Martínez Albán, Guillermo Rabassa Prados">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/site.webmanifest">
+    <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#375d68">
+    <meta name="apple-mobile-web-app-title" content="Teal Life">
+    <meta name="application-name" content="Teal Life">
+    <meta name="theme-color" content="#212121">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/tienda.css">
+    <title>Tienda</title>
+</head>
+<body>
+    <div class="mainDiv">
+        <header>
+            <a href="index.html" id="aLogo"><img src="/images/logo.png" alt="" id="fotoLogo"></a>
+                    <div class="headerBtn"><a href="tienda.html">Tienda</a></div>
+                    <div class="headerBtn"><a href="registro.html">Registro</a></div>
+                    <div class="headerBtn"><a href="contacto.html">Contacto</a></div>
+                    <div class="headerBtn"><a href="quienesomos.html">Sobre nosotros</a></div>
+        </header>
+        <div class="centerDiv">
+            <div id="tienda">
+                <div id="bienvenida">
+                    <h1>Tienda</h1>
+                    <p>¡Bienvenido a nuestra tienda!</p>
+                    <p>Todos los fondos van destinados a nuestra causa</p>
+                </div>
+                <div id="lista_productos">
+                    <div class="producto">
+                        <img src="/images/productos/foto_1.webp" alt="Ropa 1">
+                        <div class="caja_desc">
+                            <h2>Taza Ballena</h2>
+                            <p class="desc_producto">Una taza con nuestro logo</p>
+                            <p class="precio_producto">10€</p>
+                            <p class="msj_stock">Fuera de stock</p>
+                            <button class="boton_compra">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/productos/foto_2.webp" alt="Ropa 1">
+                        <div class="caja_desc">
+                            <h2>Taza </h2>
+                            <p class="desc_producto">Descripción</p>
+                            <p class="precio_producto">2€</p>
+                            <p class="msj_stock">Fuera de stock</p>
+                            <button class="boton_compra">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/productos/foto_3.webp" alt="Ropa 1">
+                        <div class="caja_desc">
+                            <h2>Pin ballena</h2>
+                            <p class="desc_producto">Un bonito pin con la forma de nuestro logo</p>
+                            <p class="precio_producto">10€</p>
+                            <p class="msj_stock">Fuera de stock</p>
+                            <button class="boton_compra">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/productos/foto_4.webp" alt="Ropa 1">
+                        <div class="caja_desc">
+                            <h2>Pin</h2>
+                            <p class="desc_producto">Descripción</p>
+                            <p class="precio_producto">2€</p>
+                            <p class="msj_stock">Fuera de stock</p>
+                            <button class="boton_compra">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <form action="mailto:asociacion@dominio.org">
+                    <input type="submit" name="enviar" id="enviar" value="Contacto">
+                </form>
+            </div>
+            <div id="newsletter">
+                <input type="text" name="correo" id="correo">
+                <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+            </div>
+            <div>
+                <button id="boton_modo"></button>
+            </div>
+            <div>
+                <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="scripts/modo.js"></script>
+</body>
+</html>
