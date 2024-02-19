@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/estilo.css">
     <link rel="stylesheet" href="css/registro.css">
-    <title>Nombre Asociación</title>
+    <title>Registro</title>
 </head>
 
 <body>
@@ -27,36 +27,41 @@
                     <table>
                         <tr>
                             <td>
-                                <div class="campo"><label for="nombre">Nombre:</label>
-                                    <input type="text" name="nombre" id="nombre" required>
+                                <div class="campo"><label for="nombre">Nombre</label>
+                                    <input type="text" name="nombre" id="nombre" required
+                                    placeholder="Introduzca su nombre">
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="campo"><label for="apellidos">Apellidos:</label>
-                                    <input type="text" name="apellidos" id="apellidos">
+                                <div class="campo"><label for="apellidos">Apellidos</label>
+                                    <input type="text" name="apellidos" id="apellidos"
+                                    placeholder="Introduzca sus apellidos">
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="campo"><label for="dni">DNI:</label>
-                                    <input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$" required>
+                                <div class="campo"><label for="dni">DNI</label>
+                                    <input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$" required
+                                    placeholder="DNI en formato 00000000L">
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="campo"><label for="mail">E-mail:</label>
-                                    <input type="email" name="mail" id="mail" required>
+                                <div class="campo"><label for="mail">E-mail</label>
+                                    <input type="email" name="mail" id="mail" required 
+                                    placeholder="Dirección de e-mail">
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="campo" id="campoEstado">
-                                    <label for="estado">Estado civil:</label>
+                                    <label for="estado">Estado civil</label>
+                                    <span id="espacio">---</span>
                                     <input type="radio" name="estado" id="soltero" value="soltero" checked>
                                     <label for="soltero" id="labelsoltero" onclick="setEsCivil(labelsoltero)"
                                         class="labelEstado">Soltero</label>
@@ -73,9 +78,9 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="campo"><label for="tlf">Tlf:</label>
+                                <div class="campo"><label for="tlf">Teléfono</label>
                                     <input type="tel" name="tlf" id="tlf" pattern="^\d{9}$"
-                                        placeholder="Introduzca su número de teléfono en formato XXXXXXXXX">
+                                        placeholder="Nº en formato XXXXXXXXX">
                                 </div>
                             </td>
                         </tr>
@@ -84,11 +89,7 @@
                 <div class="fieldset" id="fieldDisp">
                     <h3 class="legend">Disponibilidad</h3>
                     <div class="campo">
-                        
-                        
                         <select name="horaDisp" id="horaDisp"></select>
-                    </div>
-                    <div class="campo">
                         <div>
                             <div id="botonesMes" class="campo">
                                 
@@ -112,7 +113,7 @@
                                         <option value="acompañar">Acompañar a un menor</option>
                                         <option value="curiosidad">Curiosidad por la asociación</option>
                                     </select>
-                                    <textarea name="comentarios" id="comentarios" cols="70" rows="5"></textarea>
+                                    <textarea name="comentarios" id="comentarios" cols="45" rows="4"></textarea>
                                 </div>
                             </td>
                         </tr>
@@ -131,7 +132,6 @@
                                 <div class="campo">
                                     <label for="tos">Acepto los términos y
                                         condiciones.</label>
-                                    <!-- TODO: Añadir términos? -->
                                     <input type="checkbox" name="tos" id="tos" required>
                                 </div>
                             </td>
@@ -154,9 +154,12 @@
                     <input type="submit" name="enviar" id="enviar" value="Contacto">
                 </form>
             </div>
-            <div>
+            <div id="newsletter">
                 <input type="text" name="correo" id="correo">
                 <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+            </div>
+            <div>
+                <button id="boton_modo"></button>
             </div>
             <div>
                 <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
@@ -165,6 +168,7 @@
     </div>
     <script type="text/javascript" src="scripts/calendario.js"></script>
     <script type="text/javascript" src="scripts/registro.js"></script>
+    <script type="text/javascript" src="scripts/modo.js"></script>
 </body>
 
 </html>

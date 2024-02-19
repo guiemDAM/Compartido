@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/estilo.css">
     <link rel="stylesheet" href="/css/galeria.css">
     <link rel="stylesheet" href="/css/calendarIndex.css">
-    <title>Nombre Asociación</title>
+    <title>Teal Life</title>
 </head>
 <body>
     <div class="mainDiv">
@@ -24,9 +24,7 @@
                 <div id="galeriaTop" class="galeria">
                     <div class="containerImg">
                         <p class="textImg">T</p>
-
                         <p class="textExpandedImg" id="4-5-2024">Talleres educativos</p>
-
                         <img src="/testimages/foto-1.jpg">
                     </div>
                     <div class="containerImg">
@@ -62,7 +60,7 @@
                         <img src="/testimages/foto-7.jpg">
                     </div>
                     <div class="containerImg">
-                        <p class="textImg">E</p>
+                        <p class="textImg">E   </p>
                         <p class="textExpandedImg">Test</p>
                         <img src="/testimages/foto-8.jpg">
                     </div>
@@ -70,7 +68,6 @@
             </div>
         <div id="calendActiv">
             <input type="button" class="botonesMes" value="<" onclick="cambiarMes(false);">
-
             <div id="calendActivInt">
                 <label id="labelCal"></label>
             <div id="calendar"></div>
@@ -84,9 +81,12 @@
                     <input type="submit" name="enviar" id="enviar" value="Contacto">
                 </form>
             </div>
-            <div>
+            <div id="newsletter">
                 <input type="text" name="correo" id="correo">
                 <input type="submit" name="enviar" id="enviar" value="Suscribirse">
+            </div>
+            <div>
+                <button id="boton_modo"></button>
             </div>
             <div>
                 <h1><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></h1>
@@ -94,5 +94,6 @@
         </footer>
     </div>
     <script type="text/javascript" src="scripts/calendario.js"></script>
+    <script type="text/javascript" src="scripts/modo.js"></script>
 </body>
 </html>

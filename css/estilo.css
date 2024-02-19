@@ -13,12 +13,40 @@
   font-family: 'Regular';
 }
 
+.modo_claro {
+  --background-color: #000013da;
+  --border-color: rgba(255, 2, 2, 0.47);
+  --border-color-low: rgba(255, 2, 2, 0.199);
+  --shadow-color: rgba(255, 2, 2, 0.47);
+  --title-font: 'Noctado';
+  --text-font: 'Louis';
+  --text-color: white;
+  --selected-input: #ff02024e;
+  --unselected-input: #000013da;
+  --test-color: linear-gradient(0deg, rgba(125,30,0,1) -400%, rgb(0, 1, 15) 100%);
+  --glow-color: rgba(171, 212, 255, 0.863);
+}
+
+.modo_oscuro {
+  --background-color: #000013da;
+  --border-color: rgba(255, 2, 2, 0.47);
+  --border-color-low: rgba(255, 2, 2, 0.199);
+  --shadow-color: rgba(255, 2, 2, 0.47);
+  --title-font: 'Noctado';
+  --text-font: 'Louis';
+  --text-color: white;
+  --selected-input: #ff02024e;
+  --unselected-input: #000013da;
+  --test-color: linear-gradient(0deg, rgba(125,30,0,1) -400%, rgb(0, 1, 15) 100%);
+  --glow-color: rgba(4, 32, 62, 0.863);
+}
+
+
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-
 
   background: linear-gradient(300deg, #e9a27c, #e7bba6, #8cb6bc, #0e8992, #0d313a, #0d313a);
   background-size: 400%;
@@ -27,14 +55,6 @@ html, body {
   background-size: 400% 400%;
 
   font-family: Arial, Helvetica, sans-serif;
-}
-
-*{
-  --background-color: #000013da;
-  --border-color: #ff020279;
-  --title-font: 'Noctado';
-  --text-font: 'Louis';
-  --text-color: white;
 }
 
 
@@ -130,16 +150,17 @@ footer {
   grid-row: 3;
   grid-column-start: 1;
   grid-column-end: 4;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  text-align: center;
+  
 }
 
 footer a {
   text-decoration: none;
   color: whitesmoke;
   font-family: Noctado;
+  text-align: center;
 }
 
 .mainDiv a {
@@ -147,25 +168,20 @@ footer a {
   color: whitesmoke;
 }
 
-
-
-input[type="submit"] {
-  background: rgb(247, 150, 192);
-  background: radial-gradient(circle, rgb(249, 249, 249) 0%, rgb(32, 123, 235) 100%);
-  line-height: 42px;
-  padding: 0;
+input, button {
   border: none;
-  border-radius:20px;
-  width: 6em;
-  box-shadow:#0d313a 11px 5px 20px;
+
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17.3px);
+  padding-block: 0.7vw;
 }
 
-input[type="submit"]:hover  {
-  box-shadow: 0 0 10px 5px rgba(171, 212, 255, 0.863);
+input:hover, button:hover {
+  box-shadow: 0 0 10px 5px var(--glow-color);
 }
-
-
-
 
 .boton input value {
   position: relative;
@@ -175,3 +191,6 @@ input[type="submit"]:hover  {
 }
 
 
+#boton_modo {
+  width: 3vw;
+}
