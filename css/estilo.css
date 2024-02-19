@@ -152,10 +152,18 @@ footer {
   grid-row: 3;
   grid-column-start: 1;
   grid-column-end: 4;
+  
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  
+}
+
+#newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 footer a {
