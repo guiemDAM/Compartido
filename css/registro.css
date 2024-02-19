@@ -14,6 +14,8 @@ html, body {
     border-radius: 30px;
     padding: 20px;
     margin-top: 10px;
+
+    width: 100%;
     
     backdrop-filter: blur(3px);
 
@@ -33,6 +35,11 @@ textarea, select {
     width: 60%;
 }
 
+textarea {
+    width:100% !important;
+    height: 100%;
+}
+
 .centerDiv input {
     width: 60%;
     background-color: var(--background-color);
@@ -45,20 +52,24 @@ textarea, select {
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
 
-    background: var(--test-color);
+    background: var(--background-color);
     
-    color: white;
+    color: var(--text-color);
 
-    
+    width: 75%;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
 
     padding-block: calc(1em);
     padding-inline: calc(1em);
+}
 
+#datos_pers .campo {
+    justify-content: space-between;
 }
 
 #fieldDisp .campo {

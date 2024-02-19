@@ -14,35 +14,34 @@
 }
 
 .modo_claro {
-  --background-color: #000013da;
-  --header-background: rgba(255, 255, 255, 0.22);
-  --border-color: rgba(255, 2, 2, 0.47);
-  --border-color-low: rgba(255, 2, 2, 0.199);
-  --shadow-color: rgba(255, 2, 2, 0.47);
+  --background-color: #0e5d6767;
+  --border-color: rgba(0, 129, 189, 0.47);
+  --header-background: rgba(21, 76, 90, 0.342);
+  --border-color-low: rgba(2, 238, 255, 0.148);
+  --shadow-color: rgba(0, 10, 210, 0.47);
   --title-font: 'Noctado';
   --text-font: 'Louis';
   --text-color: white;
-  --selected-input: #ff02024e;
-  --unselected-input: #000013da;
-  --test-color: linear-gradient(0deg, rgba(125,30,0,1) -400%, rgb(0, 1, 15) 100%);
-  --glow-color: rgba(171, 212, 255, 0.863);
+  --selected-input: #015a60;
+  --unselected-input: #00004053;
+  --glow-color: rgba(4, 32, 62, 0.863);
+  --background-gradient: linear-gradient(300deg, #e9a27c, #e7bba6, #8cb6bc, #0e8992, #0d313a, #0d313a);
 }
 
 .modo_oscuro {
   --background-color: #000013da;
-  --border-color: rgba(255, 2, 2, 0.47);
+  --border-color: rgba(0, 10, 88, 0.47);
   --header-background: rgba(0, 0, 0, 0.295);
-  --border-color-low: rgba(255, 2, 2, 0.199);
-  --shadow-color: rgba(255, 2, 2, 0.47);
+  --border-color-low: rgba(36, 2, 255, 0.199);
+  --shadow-color: rgba(0, 8, 155, 0.47);
   --title-font: 'Noctado';
   --text-font: 'Louis';
   --text-color: white;
-  --selected-input: #ff02024e;
+  --selected-input: #00078688;
   --unselected-input: #000013da;
-  --test-color: linear-gradient(0deg, rgba(125,30,0,1) -400%, rgb(0, 1, 15) 100%);
   --glow-color: rgba(4, 32, 62, 0.863);
+  --background-gradient: linear-gradient(300deg, #33190b, #4d2d1d, #153236, #093a3d, #0d313a, #0d313a);
 }
-
 
 html, body {
   height: 100%;
@@ -50,7 +49,7 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: linear-gradient(300deg, #e9a27c, #e7bba6, #8cb6bc, #0e8992, #0d313a, #0d313a);
+  background: var(--background-gradient);
   background-size: 400%;
   animation: gradient-animation 18s ease infinite;
   opacity: 100%;

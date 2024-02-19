@@ -108,7 +108,7 @@ function buscarActiv() {
         "-" + (mes + 1) + "-" + primerDia.getFullYear());
 
     if (diaTexto != null) {
-        dias[i].style = "background-color : green";
+        dias[i].style = "background-color : var(--selected-input)";
         dias[i].setAttribute("value", dias[i].getAttribute("value") + " | " + diaTexto.innerText);
     
         dias[i].parentElement.onmouseover = (e) => mostrarPopup(diaTexto.innerText, dias[i]);
