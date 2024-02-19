@@ -12,11 +12,11 @@
     <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#375d68">
     <meta name="apple-mobile-web-app-title" content="Teal Life">
     <meta name="application-name" content="Teal Life">
-    <meta name="theme-color" content="#212121">    <link rel="stylesheet" href="/css/estilo.css">
-    <link rel="stylesheet" href="css/registro.css">
+    <meta name="theme-color" content="#212121">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/registro.css">
     <title>Registro</title>
 </head>
-
 <body>
     <div class="mainDiv">
         <header>
@@ -28,129 +28,77 @@
         </header>
         <div class="centerDiv">
             <form action="mailto:admin@asociacion.org" method="POST" enctype="text/plain">
-                <div class="fieldset">
+                <div class="fieldset" id="datos_pers">
                     <h3 class="legend">Datos Personales</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="campo"><label for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" id="nombre" required
-                                    placeholder="Introduzca su nombre">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo"><label for="apellidos">Apellidos</label>
-                                    <input type="text" name="apellidos" id="apellidos"
-                                    placeholder="Introduzca sus apellidos">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo"><label for="dni">DNI</label>
-                                    <input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$" required
-                                    placeholder="DNI en formato 00000000L">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo"><label for="mail">E-mail</label>
-                                    <input type="email" name="mail" id="mail" required 
-                                    placeholder="Dirección de e-mail">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo" id="campoEstado">
-                                    <label for="estado">Estado civil</label>
-                                    <span id="espacio">---</span>
-                                    <input type="radio" name="estado" id="soltero" value="soltero" checked>
-                                    <label for="soltero" id="labelsoltero" onclick="setEsCivil(labelsoltero)"
-                                        class="labelEstado">Soltero</label>
-
-                                    <input type="radio" name="estado" id="casado" value="casado">
-                                    <label for="casado" id="labelcasado" onclick="setEsCivil(labelcasado)"
-                                        class="labelEstado">Casado</label>
-
-                                    <input type="radio" name="estado" id="divorciado" value="divorciado">
-                                    <label for="divorciado" id="labeldivorciado" onclick="setEsCivil(labeldivorciado)"
-                                        class="labelEstado">Divorciado</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo"><label for="tlf">Teléfono</label>
-                                    <input type="tel" name="tlf" id="tlf" pattern="^\d{9}$"
-                                        placeholder="Nº en formato XXXXXXXXX">
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="campo"><label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" required placeholder="Introduzca su nombre">
+                    </div>
+                    <div class="campo"><label for="apellidos">Apellidos</label>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Introduzca sus apellidos">
+                    </div>
+                    <div class="campo"><label for="dni">DNI</label>
+                        <input type="text" name="dni" id="dni" pattern="^\d{8}[a-zA-Z]$" required placeholder="DNI en formato 00000000L">
+                    </div>
+                    <div class="campo"><label for="mail">E-mail</label>
+                        <input type="email" name="mail" id="mail" required placeholder="Dirección de e-mail">
+                    </div>
+                    <div class="campo" id="campoEstado">
+                        <label for="estado">Estado civil</label>
+                        <span id="espacio">---</span>
+                        <input type="radio" name="estado" id="soltero" value="soltero" checked>
+                        <label for="soltero" id="labelsoltero" onclick="setEsCivil(labelsoltero)" class="labelEstado">Soltero</label>
+                    
+                        <input type="radio" name="estado" id="casado" value="casado">
+                        <label for="casado" id="labelcasado" onclick="setEsCivil(labelcasado)" class="labelEstado">Casado</label>
+                    
+                        <input type="radio" name="estado" id="divorciado" value="divorciado">
+                        <label for="divorciado" id="labeldivorciado" onclick="setEsCivil(labeldivorciado)"
+                            class="labelEstado">Divorciado</label>
+                    </div>
+                    <div class="campo"><label for="tlf">Teléfono</label>
+                        <input type="tel" name="tlf" id="tlf" pattern="^\d{9}$" placeholder="Nº en formato XXXXXXXXX">
+                    </div>
                 </div>
                 <div class="fieldset" id="fieldDisp">
                     <h3 class="legend">Disponibilidad</h3>
                     <div class="campo">
                         <select name="horaDisp" id="horaDisp"></select>
-                        <div>
-                            <div id="botonesMes" class="campo">
-                                
-                                <input type="button" value="<" onclick="cambiarMes(false);">
-                                <label id="labelCal"></label>
-                                <input type="button" value=">" onclick="cambiarMes(true);">
-                            </div>
-                            <div id="calendar"></div>
+                        <div id="botonesMes" class="campo">
+                            <input type="button" value="<" onclick="cambiarMes(false);">
+                            <label id="labelCal"></label>
+                            <input type="button" value=">" onclick="cambiarMes(true);">
                         </div>
+                        <div id="calendar"></div>
                     </div>
                 </div>
                 <div class="fieldset">
                     <h3 class="legend">¿Cuál es tu motivación para unirte a nuestra organización?</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="campo">
-                                    <select name="motivacion" id="motivacion" multiple>
-                                        <option value="participar">Participar en actividades</option>
-                                        <option value="preparar">Preparar actividades</option>
-                                        <option value="acompañar">Acompañar a un menor</option>
-                                        <option value="curiosidad">Curiosidad por la asociación</option>
-                                    </select>
-                                    <textarea name="comentarios" id="comentarios" cols="45" rows="4"></textarea>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="campo">
+                        <select name="motivacion" id="motivacion" multiple>
+                            <option value="participar">Participar en actividades</option>
+                            <option value="preparar">Preparar actividades</option>
+                            <option value="acompañar">Acompañar a un menor</option>
+                            <option value="curiosidad">Curiosidad por la asociación</option>
+                        </select>
+                        <textarea name="comentarios" id="comentarios" cols="5" rows="5"></textarea>
+                    </div>
                 </div>
                 <div class="fieldset">
                     <h3 class="legend">Observaciones</h3>
                     <div class="campo">
-                        <textarea name="observaciones" id="observaciones" cols="70" rows="5"></textarea>
+                        <textarea name="observaciones" id="observaciones" cols="5" rows="5"></textarea>
                     </div>
                 </div>
                 <div class="fieldset">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="campo">
-                                    <label for="tos">Acepto los términos y
-                                        condiciones.</label>
-                                    <input type="checkbox" name="tos" id="tos" required>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="campo">
-                                    <input type="submit" name="enviar" id="enviar" value="Enviar">
-                                    <input type="reset" name="reset" id="reset">
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="campo">
+                        <label for="tos">Acepto los términos y
+                            condiciones.</label>
+                        <input type="checkbox" name="tos" id="tos" required>
+                    </div>
+                    <div class="campo">
+                        <input type="submit" name="enviar" id="enviar" value="Enviar">
+                        <input type="reset" name="reset" id="reset">
+                    </div>
                 </div>
             </form>
         </div>

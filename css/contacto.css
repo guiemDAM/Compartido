@@ -1,9 +1,5 @@
-/* Estilos generales para body y html */
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body,
+html {
   background: none !important;
 }
 
@@ -14,79 +10,55 @@ body, html {
   height: auto;
   min-width: 100%;
   min-height: 100%;
-  z-index: -1; /* Coloca el video detrás de otros elementos */
+  z-index: -1;
 }
 
 #contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho (50% cada una) */
-  grid-template-areas: "cuadra formulario";
-  grid-template-rows: auto; /* Tamaño automático para las filas */
-  gap: 20px; /* Espacio entre las columnas */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 100%;
 }
 
 #cuadra {
-  grid-area: cuadra;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 10px; /* Espacio entre los elementos */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  text-align: center; /* Alinear texto al centro */
-  margin-left: 250px;
-  width: 70%;
-  align-self: center;
+  justify-content: space-evenly;
+  
+  gap: 3%;
+  padding: 5%;
 }
 
-#cuadro01,
-#cuadro02,
-#cuadro03,
-#cuadro04 {
+.cuadro {
   background-color: rgba(255, 255, 255, 0.7);
-  display: grid;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  margin: 0;
-  width: 375px;
-  height: 375px;
-  align-self: center;
+  padding: 5%;
 }
 
-#cuadro01 img{
-  width: 148px;
-  height: 160px;
-  margin-left: 80px;
-  align-self: center;
-}
-#cuadro02 img{
-  width: 148px;
-  height: 150px;
-  margin-left: 20px;
-  align-self: center;
-}
-#cuadro03 img{
-  width: 148px;
-  height: 150px;
-  align-self: center;
-}
-#cuadro04 img {
-  width: 148px;
-  height: 150px;
-  margin-left: 15px;
-  align-self: center;
+iframe {
+  width: 100%;
 }
 
-/* Estilos para el formulario */
+.cuadro img {
+  width: 30%;
+}
+
 #formulario {
-  grid-area: formulario;
-  padding: 20px;
   background-color: rgba(112, 128, 144, 0.7);
-  width: 70%;
+  width: 100%;
   align-self: baseline;
-  height: 95%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #titulo_formulario {
@@ -95,102 +67,44 @@ body, html {
 }
 
 #formulario_org {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-area: formulario_org;
-  grid-gap: 10px;
-  overflow: hidden;
-  align-items: center;
-  grid-template-areas: 
-    "nombre"
-    "correo"
-    "asunto"
-    "enviar";
-}
-
-#inputs {
-  display: grid;
-  grid-template-columns: minmax(35%, max-content) minmax(65%, max-content);
-  grid-gap: 10px;
-  margin-top: 60px;
-}
-
-#inputs label {
-  font-size: 1.8em;
-  font-family: 'Noctado';
-}
-
-#nombre {
-  grid-area: nombre;
-  width: 100%;
-}
-
-#email {
-  grid-area: correo;
-  width: 100%;
-}
-
-#asunto textarea {
-  grid-area: asunto;
-  width: 100%;
-}
-
-#asunto {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-#asunto label {
-  grid-row: 1;
+.campo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.campo input {
+  width: 50%;
+}
+
+.campo textarea {
+  width: 70%;
+}
+
+#formulario_org label {
   font-size: 1.8em;
   font-family: 'Noctado';
 }
 
 #enviarasunto {
-  width: 100%;
-  background-color: rgba(135, 206, 250, 0.8)!important;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  display: inline-block; /* Ajusta el botón para que se comporte como un elemento en línea */
-  margin: auto; /* Centra horizontalmente */
+  background-color: rgba(135, 206, 250, 0.8) !important;
+  margin: auto;
 }
 
-.comu{
-font-family: 'Noctado';
-font-size: 1.5em;
-margin: 0;
+.comu {
+  font-family: 'Noctado';
+  font-size: 1.5em;
 }
 
-p{
-  margin: 0;
-  font-family: 'louis';
-}
-
-input[type="submit"] {
-  background: #0099ff!important;
-  color: white!important;
-  line-height: 42px!important;
-  padding: 0 20px!important;
-  border: none!important;
-  border-radius: 20px!important;
-  width: auto!important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)!important;
-  cursor: pointer!important;
-}
-
-input[type="submit"]:hover {
-  background: #007acc!important;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  background-color: rgba(255, 255, 255, 0.8)!important; /* Hacer las cajas opacas con un nivel de opacidad del 0.8 */
+p {
+  font-family: 'Louis';
 }
 
 #tienda {
@@ -198,16 +112,10 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-  margin-bottom: 0px;
-  height: 300px;
 }
 
 #videoTienda {
-  height: 400px;
-  width: 150px;
-  border-radius: 25%;
-  overflow: hidden;
+  width: 30%;
 }
 
 #tienda h3 {

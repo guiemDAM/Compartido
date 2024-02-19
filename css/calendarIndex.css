@@ -2,15 +2,14 @@
     margin-top: 5%;
     border-radius: 5px 5px;
     border: 10px rgba(0, 0, 0, 0.199) solid;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
 
-    background-color: #000013da;
+    background-color: var(--background-color);
     color: white;
 
     display: flex;
-    flex-direction: col;
     justify-content: space-between;
 
     padding-block: calc(1em);
@@ -41,7 +40,7 @@
 
 .diaCalendario {
     width : 100%;
-    color: white;
+    color: var(--text-color);
     border-radius: 5px 5px;
     box-shadow: 0px 1px 5px var(--border-color);
     border: 2px  var(--border-color) solid;
@@ -62,11 +61,11 @@
     background-color: var(--background-color);
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
-    color: white;
+    color: var(--text-color);
 }
 
 .campo input {
-    color: white;
+    color: var(--text-color);
 }
 
 #popup {
@@ -87,7 +86,7 @@
     background-color: var(--background-color);
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17.3px);
-    color: white;
+    color: var(--text-color);
 
     pointer-events: none;
 }

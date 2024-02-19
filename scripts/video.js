@@ -1,14 +1,10 @@
-// Get the video container element
 const videoContainer = document.getElementById("caja_video");
 
-// Add event listener for scroll
+const maxHeight = document.documentElement.scrollHeight / 4;
+
 window.addEventListener("scroll", function() {
-    // Calculate the scroll percentage
-    const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-    // Calculate the new top position of the video container
-    const newTop = scrollPercentage * (document.documentElement.scrollHeight - window.innerHeight);
-
-    // Set the new top position
-    videoContainer.style.top = `-${newTop}px`;
+    let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - window.innerHeight);
+    
+    let newTop = scrollPercentage * 100;
+    videoContainer.style.top = `-${newTop}%`;
 });

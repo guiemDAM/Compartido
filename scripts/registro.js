@@ -1,3 +1,10 @@
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const info = urlParams.get('info');
+    document.getElementById('comentarios').value = info;
+    document.getElementById("motivacion").value = "participar";
+}
+
 var selHora = document.getElementById('horaDisp'); 
 
 for (var i = 8; i<=21; i++){
@@ -10,7 +17,6 @@ for (var i = 8; i<=21; i++){
     selHora.appendChild(hora);
     selHora.appendChild(media);
 }
-
 
 /**
  * Colorea las etiquetas del estado civil acorde a su estado
